@@ -1,0 +1,13 @@
+
+target/
+dbt_packages/
+logs/
+.gitignore
+README.md
+analyses/
+dbt_project.yml
+macros/
+models/
+seeds/
+snapshots/
+tests/

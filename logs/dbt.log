@@ -1,0 +1,1797 @@
+[0m05:28:59.898281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D023C86970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D02559D4C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D02225FDC0>]}
+
+
+============================== 05:28:59.905827 | 5b7c764c-0dab-4ad0-86fc-89c16081cfa4 ==============================
+[0m05:28:59.905827 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m05:28:59.907870 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\talla\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\talla\\Desktop\\MyProjects\\dbt_sf_J25\\nse_data_dsf\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m05:28:59.949718 [info ] [MainThread]: dbt version: 1.9.0-b2
+[0m05:28:59.951702 [info ] [MainThread]: python version: 3.8.7
+[0m05:28:59.952722 [info ] [MainThread]: python path: C:\Users\talla\AppData\Local\Programs\Python\Python38\python.exe
+[0m05:28:59.954710 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m05:29:02.440179 [info ] [MainThread]: Using profiles dir at C:\Users\talla\.dbt
+[0m05:29:02.441705 [info ] [MainThread]: Using profiles.yml file at C:\Users\talla\.dbt\profiles.yml
+[0m05:29:02.442715 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\talla\Desktop\MyProjects\dbt_sf_J25\nse_data_dsf\dbt_project.yml
+[0m05:29:02.445714 [info ] [MainThread]: adapter type: snowflake
+[0m05:29:02.446716 [info ] [MainThread]: adapter version: 1.8.4
+[0m05:29:02.659249 [info ] [MainThread]: Configuration:
+[0m05:29:02.661017 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m05:29:02.663545 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:29:02.665598 [info ] [MainThread]: Required dependencies:
+[0m05:29:02.666588 [debug] [MainThread]: Executing "git --help"
+[0m05:29:02.957633 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m05:29:02.958622 [debug] [MainThread]: STDERR: "b''"
+[0m05:29:02.959636 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m05:29:02.961625 [info ] [MainThread]: Connection:
+[0m05:29:02.964186 [info ] [MainThread]:   account: da33770.us-east-2.aws
+[0m05:29:02.965207 [info ] [MainThread]:   user: ramarao0166
+[0m05:29:02.966203 [info ] [MainThread]:   database: EDH_DEV
+[0m05:29:02.968205 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m05:29:02.969206 [info ] [MainThread]:   role: AccountAdmin
+[0m05:29:02.971217 [info ] [MainThread]:   schema: RAW
+[0m05:29:02.972216 [info ] [MainThread]:   authenticator: None
+[0m05:29:02.974202 [info ] [MainThread]:   oauth_client_id: None
+[0m05:29:02.976200 [info ] [MainThread]:   query_tag: None
+[0m05:29:02.977202 [info ] [MainThread]:   client_session_keep_alive: False
+[0m05:29:02.979199 [info ] [MainThread]:   host: None
+[0m05:29:02.980204 [info ] [MainThread]:   port: None
+[0m05:29:02.982590 [info ] [MainThread]:   proxy_host: None
+[0m05:29:02.984587 [info ] [MainThread]:   proxy_port: None
+[0m05:29:02.985587 [info ] [MainThread]:   protocol: None
+[0m05:29:02.986586 [info ] [MainThread]:   connect_retries: 1
+[0m05:29:02.988599 [info ] [MainThread]:   connect_timeout: None
+[0m05:29:02.989590 [info ] [MainThread]:   retry_on_database_errors: False
+[0m05:29:02.991591 [info ] [MainThread]:   retry_all: False
+[0m05:29:02.993586 [info ] [MainThread]:   insecure_mode: False
+[0m05:29:02.994587 [info ] [MainThread]:   reuse_connections: None
+[0m05:29:02.996603 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m05:29:02.998756 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m05:29:02.999752 [debug] [MainThread]: Using snowflake connection "debug"
+[0m05:29:03.000750 [debug] [MainThread]: On debug: select 1 as id
+[0m05:29:03.001753 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:29:03.646523 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.645 seconds
+[0m05:29:03.648668 [debug] [MainThread]: On debug: Close
+[0m05:29:03.764053 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m05:29:03.766079 [info ] [MainThread]: [32mAll checks passed![0m
+[0m05:29:03.770086 [debug] [MainThread]: Command `dbt debug` succeeded at 05:29:03.770086 after 3.97 seconds
+[0m05:29:03.771087 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m05:29:03.772088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D023C86970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03EEA5250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D03EEA5160>]}
+[0m05:29:03.772088 [debug] [MainThread]: Flushing usage events
+[0m05:29:04.082450 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:29:49.366460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001938FC268E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000193918B9B20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000193918CB9D0>]}
+
+
+============================== 05:29:49.373456 | 88bad4cb-c911-41d4-9258-10e01fceef8f ==============================
+[0m05:29:49.373456 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m05:29:49.376454 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\talla\\Desktop\\MyProjects\\dbt_sf_J25\\nse_data_dsf\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\talla\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m05:29:49.416169 [info ] [MainThread]: dbt version: 1.9.0-b2
+[0m05:29:49.418150 [info ] [MainThread]: python version: 3.8.7
+[0m05:29:49.419168 [info ] [MainThread]: python path: C:\Users\talla\AppData\Local\Programs\Python\Python38\python.exe
+[0m05:29:49.421156 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m05:29:52.244295 [info ] [MainThread]: Using profiles dir at C:\Users\talla\.dbt
+[0m05:29:52.246300 [info ] [MainThread]: Using profiles.yml file at C:\Users\talla\.dbt\profiles.yml
+[0m05:29:52.248835 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\talla\Desktop\MyProjects\dbt_sf_J25\nse_data_dsf\dbt_project.yml
+[0m05:29:52.252824 [info ] [MainThread]: adapter type: snowflake
+[0m05:29:52.254826 [info ] [MainThread]: adapter version: 1.8.4
+[0m05:29:52.552393 [info ] [MainThread]: Configuration:
+[0m05:29:52.555398 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m05:29:52.557939 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:29:52.559942 [info ] [MainThread]: Required dependencies:
+[0m05:29:52.563447 [debug] [MainThread]: Executing "git --help"
+[0m05:29:53.069200 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m05:29:53.070209 [debug] [MainThread]: STDERR: "b''"
+[0m05:29:53.072200 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m05:29:53.074194 [info ] [MainThread]: Connection:
+[0m05:29:53.075193 [info ] [MainThread]:   account: da33770.us-east-2.aws
+[0m05:29:53.078236 [info ] [MainThread]:   user: ramarao0166
+[0m05:29:53.080457 [info ] [MainThread]:   database: EDH_DEV
+[0m05:29:53.082881 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m05:29:53.085193 [info ] [MainThread]:   role: AccountAdmin
+[0m05:29:53.086883 [info ] [MainThread]:   schema: RAW
+[0m05:29:53.089151 [info ] [MainThread]:   authenticator: None
+[0m05:29:53.090526 [info ] [MainThread]:   oauth_client_id: None
+[0m05:29:53.092238 [info ] [MainThread]:   query_tag: None
+[0m05:29:53.093908 [info ] [MainThread]:   client_session_keep_alive: False
+[0m05:29:53.096447 [info ] [MainThread]:   host: None
+[0m05:29:53.099466 [info ] [MainThread]:   port: None
+[0m05:29:53.101467 [info ] [MainThread]:   proxy_host: None
+[0m05:29:53.104467 [info ] [MainThread]:   proxy_port: None
+[0m05:29:53.106473 [info ] [MainThread]:   protocol: None
+[0m05:29:53.108636 [info ] [MainThread]:   connect_retries: 1
+[0m05:29:53.112547 [info ] [MainThread]:   connect_timeout: None
+[0m05:29:53.115944 [info ] [MainThread]:   retry_on_database_errors: False
+[0m05:29:53.119438 [info ] [MainThread]:   retry_all: False
+[0m05:29:53.123571 [info ] [MainThread]:   insecure_mode: False
+[0m05:29:53.127106 [info ] [MainThread]:   reuse_connections: None
+[0m05:29:53.129120 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m05:29:53.133737 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m05:29:53.136731 [debug] [MainThread]: Using snowflake connection "debug"
+[0m05:29:53.139260 [debug] [MainThread]: On debug: select 1 as id
+[0m05:29:53.140242 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:29:53.913438 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.773 seconds
+[0m05:29:53.916779 [debug] [MainThread]: On debug: Close
+[0m05:29:54.010280 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m05:29:54.012281 [info ] [MainThread]: [32mAll checks passed![0m
+[0m05:29:54.018986 [debug] [MainThread]: Command `dbt debug` succeeded at 05:29:54.018473 after 4.76 seconds
+[0m05:29:54.020511 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m05:29:54.021019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001938FC268E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000193AADB5A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000193AADB5670>]}
+[0m05:29:54.021527 [debug] [MainThread]: Flushing usage events
+[0m05:29:54.302044 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:35:08.051778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288E22F6970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288E3C0D4C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288E08CFDC0>]}
+
+
+============================== 05:35:08.059294 | 9e578bef-92a8-43fa-9025-983e05b0dbeb ==============================
+[0m05:35:08.059294 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m05:35:08.060301 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\talla\\Desktop\\MyProjects\\dbt_sf_J25\\nse_data_dsf\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\talla\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m05:35:08.114426 [info ] [MainThread]: dbt version: 1.9.0-b2
+[0m05:35:08.117453 [info ] [MainThread]: python version: 3.8.7
+[0m05:35:08.119446 [info ] [MainThread]: python path: C:\Users\talla\AppData\Local\Programs\Python\Python38\python.exe
+[0m05:35:08.121443 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m05:35:10.816269 [info ] [MainThread]: Using profiles dir at C:\Users\talla\.dbt
+[0m05:35:10.818292 [info ] [MainThread]: Using profiles.yml file at C:\Users\talla\.dbt\profiles.yml
+[0m05:35:10.820279 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\talla\Desktop\MyProjects\dbt_sf_J25\nse_data_dsf\dbt_project.yml
+[0m05:35:10.823300 [info ] [MainThread]: adapter type: snowflake
+[0m05:35:10.824740 [info ] [MainThread]: adapter version: 1.8.4
+[0m05:35:11.045475 [info ] [MainThread]: Configuration:
+[0m05:35:11.047611 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m05:35:11.048606 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:35:11.050617 [info ] [MainThread]: Required dependencies:
+[0m05:35:11.052607 [debug] [MainThread]: Executing "git --help"
+[0m05:35:11.373308 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m05:35:11.374307 [debug] [MainThread]: STDERR: "b''"
+[0m05:35:11.375443 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m05:35:11.377464 [info ] [MainThread]: Connection:
+[0m05:35:11.378461 [info ] [MainThread]:   account: da33770.us-east-2.aws
+[0m05:35:11.379973 [info ] [MainThread]:   user: ramarao0166
+[0m05:35:11.381986 [info ] [MainThread]:   database: DL_NORTHWIND
+[0m05:35:11.382988 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m05:35:11.385523 [info ] [MainThread]:   role: AccountAdmin
+[0m05:35:11.387522 [info ] [MainThread]:   schema: RAW
+[0m05:35:11.388520 [info ] [MainThread]:   authenticator: None
+[0m05:35:11.390522 [info ] [MainThread]:   oauth_client_id: None
+[0m05:35:11.391535 [info ] [MainThread]:   query_tag: None
+[0m05:35:11.393523 [info ] [MainThread]:   client_session_keep_alive: False
+[0m05:35:11.395712 [info ] [MainThread]:   host: None
+[0m05:35:11.397870 [info ] [MainThread]:   port: None
+[0m05:35:11.399871 [info ] [MainThread]:   proxy_host: None
+[0m05:35:11.401871 [info ] [MainThread]:   proxy_port: None
+[0m05:35:11.402873 [info ] [MainThread]:   protocol: None
+[0m05:35:11.404392 [info ] [MainThread]:   connect_retries: 1
+[0m05:35:11.406410 [info ] [MainThread]:   connect_timeout: None
+[0m05:35:11.407923 [info ] [MainThread]:   retry_on_database_errors: False
+[0m05:35:11.409950 [info ] [MainThread]:   retry_all: False
+[0m05:35:11.411943 [info ] [MainThread]:   insecure_mode: False
+[0m05:35:11.411943 [info ] [MainThread]:   reuse_connections: None
+[0m05:35:11.415794 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m05:35:11.418785 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m05:35:11.420788 [debug] [MainThread]: Using snowflake connection "debug"
+[0m05:35:11.422782 [debug] [MainThread]: On debug: select 1 as id
+[0m05:35:11.422782 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:35:12.160334 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.736 seconds
+[0m05:35:12.161698 [debug] [MainThread]: On debug: Close
+[0m05:35:12.265992 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m05:35:12.269008 [info ] [MainThread]: [32mAll checks passed![0m
+[0m05:35:12.273000 [debug] [MainThread]: Command `dbt debug` succeeded at 05:35:12.273000 after 4.33 seconds
+[0m05:35:12.273000 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m05:35:12.274538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288E22F6970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288FD515250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288FD515160>]}
+[0m05:35:12.275582 [debug] [MainThread]: Flushing usage events
+[0m05:35:12.547703 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:04:11.137605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171AD196910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171AEE29B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171AEAD2FD0>]}
+
+
+============================== 06:04:11.147710 | e6558425-cc20-402a-ba5d-b48e26eeb956 ==============================
+[0m06:04:11.147710 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m06:04:11.149710 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\talla\\Desktop\\MyProjects\\dbt_sf_J25\\nse_data_dsf\\logs', 'profiles_dir': 'C:\\Users\\talla\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m06:04:11.214325 [info ] [MainThread]: dbt version: 1.9.0-b2
+[0m06:04:11.215335 [info ] [MainThread]: python version: 3.8.7
+[0m06:04:11.217509 [info ] [MainThread]: python path: C:\Users\talla\AppData\Local\Programs\Python\Python38\python.exe
+[0m06:04:11.218504 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m06:04:15.032154 [info ] [MainThread]: Using profiles dir at C:\Users\talla\.dbt
+[0m06:04:15.035150 [info ] [MainThread]: Using profiles.yml file at C:\Users\talla\.dbt\profiles.yml
+[0m06:04:15.036151 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\talla\Desktop\MyProjects\dbt_sf_J25\nse_data_dsf\dbt_project.yml
+[0m06:04:15.039308 [info ] [MainThread]: adapter type: snowflake
+[0m06:04:15.041311 [info ] [MainThread]: adapter version: 1.8.4
+[0m06:04:15.271808 [info ] [MainThread]: Configuration:
+[0m06:04:15.273811 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m06:04:15.276314 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m06:04:15.277952 [info ] [MainThread]: Required dependencies:
+[0m06:04:15.278970 [debug] [MainThread]: Executing "git --help"
+[0m06:04:15.606341 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m06:04:15.607353 [debug] [MainThread]: STDERR: "b''"
+[0m06:04:15.608361 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m06:04:15.611362 [info ] [MainThread]: Connection:
+[0m06:04:15.612362 [info ] [MainThread]:   account: da33770.us-east-2.aws
+[0m06:04:15.614527 [info ] [MainThread]:   user: ramarao0166
+[0m06:04:15.614527 [info ] [MainThread]:   database: DL_NORTHWIND
+[0m06:04:15.618056 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m06:04:15.619050 [info ] [MainThread]:   role: AccountAdmin
+[0m06:04:15.620056 [info ] [MainThread]:   schema: RAW
+[0m06:04:15.621054 [info ] [MainThread]:   authenticator: None
+[0m06:04:15.622053 [info ] [MainThread]:   oauth_client_id: None
+[0m06:04:15.624063 [info ] [MainThread]:   query_tag: None
+[0m06:04:15.625053 [info ] [MainThread]:   client_session_keep_alive: False
+[0m06:04:15.626052 [info ] [MainThread]:   host: None
+[0m06:04:15.626569 [info ] [MainThread]:   port: None
+[0m06:04:15.628571 [info ] [MainThread]:   proxy_host: None
+[0m06:04:15.630090 [info ] [MainThread]:   proxy_port: None
+[0m06:04:15.632111 [info ] [MainThread]:   protocol: None
+[0m06:04:15.634108 [info ] [MainThread]:   connect_retries: 1
+[0m06:04:15.636102 [info ] [MainThread]:   connect_timeout: None
+[0m06:04:15.637630 [info ] [MainThread]:   retry_on_database_errors: False
+[0m06:04:15.638634 [info ] [MainThread]:   retry_all: False
+[0m06:04:15.640626 [info ] [MainThread]:   insecure_mode: False
+[0m06:04:15.641624 [info ] [MainThread]:   reuse_connections: None
+[0m06:04:15.643628 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m06:04:15.644626 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m06:04:15.646680 [debug] [MainThread]: Using snowflake connection "debug"
+[0m06:04:15.648695 [debug] [MainThread]: On debug: select 1 as id
+[0m06:04:15.649691 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m06:04:16.436033 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.786 seconds
+[0m06:04:16.438434 [debug] [MainThread]: On debug: Close
+[0m06:04:16.540559 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m06:04:16.543561 [info ] [MainThread]: [32mAll checks passed![0m
+[0m06:04:16.547644 [debug] [MainThread]: Command `dbt debug` succeeded at 06:04:16.547644 after 5.52 seconds
+[0m06:04:16.548658 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m06:04:16.550675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171AD196910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171C83BA190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171C8373310>]}
+[0m06:04:16.550675 [debug] [MainThread]: Flushing usage events
+[0m06:04:16.846443 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:04:48.727592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225C53568B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225C392FD00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225C6C92940>]}
+
+
+============================== 06:04:48.735191 | 80c7049e-7124-4f55-b4b2-e4e9b43605ef ==============================
+[0m06:04:48.735191 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m06:04:48.737175 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\talla\\Desktop\\MyProjects\\dbt_sf_J25\\nse_data_dsf\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\talla\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m06:04:51.992988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '80c7049e-7124-4f55-b4b2-e4e9b43605ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225C3B3BE80>]}
+[0m06:04:52.130128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '80c7049e-7124-4f55-b4b2-e4e9b43605ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225E03E5970>]}
+[0m06:04:52.133277 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m06:04:52.154317 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m06:04:52.157313 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m06:04:52.158735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '80c7049e-7124-4f55-b4b2-e4e9b43605ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225E05203A0>]}
+[0m06:04:55.005946 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two sources with the name "northwind_customer".
+  
+  Since these resources have the same name, dbt will be unable to find the correct resource
+  when looking for source("northwind", "customer").
+  
+  To fix this, change the name of one of these resources:
+  - source.nse_data_dsf.northwind.customer (models\staging\source.yml)
+  - source.nse_data_dsf.northwind.customer (models\staging\source.yml)
+[0m06:04:55.011528 [debug] [MainThread]: Command `dbt run` failed at 06:04:55.010524 after 6.40 seconds
+[0m06:04:55.012529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225C53568B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225E0848E20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225E08BB910>]}
+[0m06:04:55.013525 [debug] [MainThread]: Flushing usage events
+[0m06:04:55.285192 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:06:06.554183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB908768B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB8EE4FD00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB921B2940>]}
+
+
+============================== 06:06:06.562192 | 07ad3932-d40d-4b27-9c74-a1b6a47e74ba ==============================
+[0m06:06:06.562192 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m06:06:06.563192 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\talla\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\talla\\Desktop\\MyProjects\\dbt_sf_J25\\nse_data_dsf\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m06:06:09.398101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '07ad3932-d40d-4b27-9c74-a1b6a47e74ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB8F056E80>]}
+[0m06:06:09.509750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '07ad3932-d40d-4b27-9c74-a1b6a47e74ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAB8F9A60>]}
+[0m06:06:09.511748 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m06:06:09.531976 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m06:06:09.534955 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m06:06:09.536960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '07ad3932-d40d-4b27-9c74-a1b6a47e74ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBABA1ADF0>]}
+[0m06:06:12.227522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '07ad3932-d40d-4b27-9c74-a1b6a47e74ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBABE7BD60>]}
+[0m06:06:12.483169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '07ad3932-d40d-4b27-9c74-a1b6a47e74ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBABF4C9D0>]}
+[0m06:06:12.484167 [info ] [MainThread]: Found 1 model, 20 sources, 454 macros
+[0m06:06:12.485169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '07ad3932-d40d-4b27-9c74-a1b6a47e74ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBABC299D0>]}
+[0m06:06:12.488171 [info ] [MainThread]: 
+[0m06:06:12.490168 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m06:06:12.492166 [info ] [MainThread]: 
+[0m06:06:12.494167 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m06:06:12.498691 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DL_NORTHWIND'
+[0m06:06:12.526233 [debug] [ThreadPool]: Using snowflake connection "list_DL_NORTHWIND"
+[0m06:06:12.526233 [debug] [ThreadPool]: On list_DL_NORTHWIND: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "list_DL_NORTHWIND"} */
+show terse schemas in database DL_NORTHWIND
+    limit 10000
+[0m06:06:12.527232 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:06:13.253836 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.726 seconds
+[0m06:06:13.258052 [debug] [ThreadPool]: On list_DL_NORTHWIND: Close
+[0m06:06:13.358529 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DL_NORTHWIND_RAW'
+[0m06:06:13.379272 [debug] [ThreadPool]: Using snowflake connection "list_DL_NORTHWIND_RAW"
+[0m06:06:13.379806 [debug] [ThreadPool]: On list_DL_NORTHWIND_RAW: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "list_DL_NORTHWIND_RAW"} */
+show objects in DL_NORTHWIND.RAW limit 10000
+[0m06:06:13.381496 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:06:13.843906 [debug] [ThreadPool]: SQL status: SUCCESS 20 in 0.463 seconds
+[0m06:06:13.850480 [debug] [ThreadPool]: On list_DL_NORTHWIND_RAW: Close
+[0m06:06:13.961576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '07ad3932-d40d-4b27-9c74-a1b6a47e74ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAB1061F0>]}
+[0m06:06:13.972162 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_customer
+[0m06:06:13.973161 [info ] [Thread-1  ]: 1 of 1 START sql view model RAW.stag_customer .................................. [RUN]
+[0m06:06:13.975160 [debug] [Thread-1  ]: Acquiring new snowflake connection 'model.nse_data_dsf.stag_customer'
+[0m06:06:13.976167 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_customer
+[0m06:06:13.993734 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_customer"
+[0m06:06:14.000290 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_customer
+[0m06:06:14.057611 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_customer"
+[0m06:06:14.064161 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_customer"
+[0m06:06:14.065186 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_customer"} */
+create or replace   view DL_NORTHWIND.RAW.stag_customer
+  
+   as (
+    with source as (
+
+    select * from ('northwind', 'customer')
+)
+select * from source
+  );
+[0m06:06:14.066173 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m06:06:14.558515 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01ba19d6-0002-4c76-0000-0007425258a9
+[0m06:06:14.559515 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 6 at position 19 unexpected ''northwind''.
+syntax error line 7 at position 0 unexpected ')'.
+syntax error line 8 at position 0 unexpected 'select'.
+[0m06:06:14.560515 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: Close
+[0m06:06:14.680880 [debug] [Thread-1  ]: Database Error in model stag_customer (models\staging\stag_customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 6 at position 19 unexpected ''northwind''.
+  syntax error line 7 at position 0 unexpected ')'.
+  syntax error line 8 at position 0 unexpected 'select'.
+  compiled code at target\run\nse_data_dsf\models\staging\stag_customer.sql
+[0m06:06:14.684897 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '07ad3932-d40d-4b27-9c74-a1b6a47e74ba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAC2F0E50>]}
+[0m06:06:14.685897 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model RAW.stag_customer ......................... [[31mERROR[0m in 0.71s]
+[0m06:06:14.688898 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_customer
+[0m06:06:14.689903 [debug] [Thread-4  ]: Marking all children of 'model.nse_data_dsf.stag_customer' to be skipped because of status 'error'.  Reason: Database Error in model stag_customer (models\staging\stag_customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 6 at position 19 unexpected ''northwind''.
+  syntax error line 7 at position 0 unexpected ')'.
+  syntax error line 8 at position 0 unexpected 'select'.
+  compiled code at target\run\nse_data_dsf\models\staging\stag_customer.sql.
+[0m06:06:14.692899 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:06:14.693897 [debug] [MainThread]: Connection 'list_DL_NORTHWIND' was properly closed.
+[0m06:06:14.693897 [debug] [MainThread]: Connection 'list_DL_NORTHWIND_RAW' was properly closed.
+[0m06:06:14.694897 [debug] [MainThread]: Connection 'model.nse_data_dsf.stag_customer' was properly closed.
+[0m06:06:14.694897 [info ] [MainThread]: 
+[0m06:06:14.696898 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.20 seconds (2.20s).
+[0m06:06:14.699430 [debug] [MainThread]: Command end result
+[0m06:06:14.775244 [info ] [MainThread]: 
+[0m06:06:14.776247 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successs, and 0 warnings:[0m
+[0m06:06:14.778249 [info ] [MainThread]: 
+[0m06:06:14.780784 [error] [MainThread]:   Database Error in model stag_customer (models\staging\stag_customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 6 at position 19 unexpected ''northwind''.
+  syntax error line 7 at position 0 unexpected ')'.
+  syntax error line 8 at position 0 unexpected 'select'.
+  compiled code at target\run\nse_data_dsf\models\staging\stag_customer.sql
+[0m06:06:14.782799 [info ] [MainThread]: 
+[0m06:06:14.783803 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m06:06:14.787796 [debug] [MainThread]: Command `dbt run` failed at 06:06:14.787796 after 8.34 seconds
+[0m06:06:14.788814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB908768B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBAB8F9A60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EBABF835B0>]}
+[0m06:06:14.789813 [debug] [MainThread]: Flushing usage events
+[0m06:06:15.049868 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:08:14.110487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000224621C6970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022463E595B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002246079FDC0>]}
+
+
+============================== 06:08:14.118664 | af02168c-dc2c-4139-80e1-f3cdbaf1b78d ==============================
+[0m06:08:14.118664 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m06:08:14.120664 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\talla\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\talla\\Desktop\\MyProjects\\dbt_sf_J25\\nse_data_dsf\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m06:08:16.831605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'af02168c-dc2c-4139-80e1-f3cdbaf1b78d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002247D232910>]}
+[0m06:08:16.937875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'af02168c-dc2c-4139-80e1-f3cdbaf1b78d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002247D25C790>]}
+[0m06:08:16.940269 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m06:08:16.958645 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m06:08:17.375156 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m06:08:17.377134 [debug] [MainThread]: Partial parsing: updated file: nse_data_dsf://models\staging\stag_customer.sql
+[0m06:08:17.880939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'af02168c-dc2c-4139-80e1-f3cdbaf1b78d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002247D759040>]}
+[0m06:08:18.191162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'af02168c-dc2c-4139-80e1-f3cdbaf1b78d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002247D5A7D90>]}
+[0m06:08:18.192159 [info ] [MainThread]: Found 1 model, 20 sources, 454 macros
+[0m06:08:18.193179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'af02168c-dc2c-4139-80e1-f3cdbaf1b78d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002247D759A90>]}
+[0m06:08:18.196697 [info ] [MainThread]: 
+[0m06:08:18.197711 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m06:08:18.198755 [info ] [MainThread]: 
+[0m06:08:18.200756 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m06:08:18.204741 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DL_NORTHWIND'
+[0m06:08:18.231900 [debug] [ThreadPool]: Using snowflake connection "list_DL_NORTHWIND"
+[0m06:08:18.232900 [debug] [ThreadPool]: On list_DL_NORTHWIND: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "list_DL_NORTHWIND"} */
+show terse schemas in database DL_NORTHWIND
+    limit 10000
+[0m06:08:18.233901 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:08:19.283520 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 1.049 seconds
+[0m06:08:19.285903 [debug] [ThreadPool]: On list_DL_NORTHWIND: Close
+[0m06:08:19.393917 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DL_NORTHWIND_RAW'
+[0m06:08:19.441235 [debug] [ThreadPool]: Using snowflake connection "list_DL_NORTHWIND_RAW"
+[0m06:08:19.441235 [debug] [ThreadPool]: On list_DL_NORTHWIND_RAW: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "list_DL_NORTHWIND_RAW"} */
+show objects in DL_NORTHWIND.RAW limit 10000
+[0m06:08:19.442235 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:08:19.964183 [debug] [ThreadPool]: SQL status: SUCCESS 20 in 0.522 seconds
+[0m06:08:19.968203 [debug] [ThreadPool]: On list_DL_NORTHWIND_RAW: Close
+[0m06:08:20.083378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'af02168c-dc2c-4139-80e1-f3cdbaf1b78d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022463FE8CA0>]}
+[0m06:08:20.105361 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_customer
+[0m06:08:20.106339 [info ] [Thread-1  ]: 1 of 1 START sql view model RAW.stag_customer .................................. [RUN]
+[0m06:08:20.108338 [debug] [Thread-1  ]: Acquiring new snowflake connection 'model.nse_data_dsf.stag_customer'
+[0m06:08:20.109337 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_customer
+[0m06:08:20.157161 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_customer"
+[0m06:08:20.160170 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_customer
+[0m06:08:20.257593 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_customer"
+[0m06:08:20.260598 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_customer"
+[0m06:08:20.261591 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_customer"} */
+create or replace   view DL_NORTHWIND.RAW.stag_customer
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.customer
+)
+select * from source
+  );
+[0m06:08:20.263132 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m06:08:20.733462 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01ba19d8-0002-4c77-0000-000742526941
+[0m06:08:20.734448 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'DL_NORTHWIND.STAGE.CUSTOMER' does not exist or not authorized.
+[0m06:08:20.735459 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: Close
+[0m06:08:20.831204 [debug] [Thread-1  ]: Database Error in model stag_customer (models\staging\stag_customer.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'DL_NORTHWIND.STAGE.CUSTOMER' does not exist or not authorized.
+  compiled code at target\run\nse_data_dsf\models\staging\stag_customer.sql
+[0m06:08:20.834235 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'af02168c-dc2c-4139-80e1-f3cdbaf1b78d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002247D9E7CD0>]}
+[0m06:08:20.836235 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model RAW.stag_customer ......................... [[31mERROR[0m in 0.72s]
+[0m06:08:20.838245 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_customer
+[0m06:08:20.840233 [debug] [Thread-4  ]: Marking all children of 'model.nse_data_dsf.stag_customer' to be skipped because of status 'error'.  Reason: Database Error in model stag_customer (models\staging\stag_customer.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'DL_NORTHWIND.STAGE.CUSTOMER' does not exist or not authorized.
+  compiled code at target\run\nse_data_dsf\models\staging\stag_customer.sql.
+[0m06:08:20.843246 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:08:20.844234 [debug] [MainThread]: Connection 'list_DL_NORTHWIND' was properly closed.
+[0m06:08:20.844234 [debug] [MainThread]: Connection 'list_DL_NORTHWIND_RAW' was properly closed.
+[0m06:08:20.845234 [debug] [MainThread]: Connection 'model.nse_data_dsf.stag_customer' was properly closed.
+[0m06:08:20.845234 [info ] [MainThread]: 
+[0m06:08:20.847796 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.65 seconds (2.65s).
+[0m06:08:20.849814 [debug] [MainThread]: Command end result
+[0m06:08:21.070575 [info ] [MainThread]: 
+[0m06:08:21.072589 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successs, and 0 warnings:[0m
+[0m06:08:21.074576 [info ] [MainThread]: 
+[0m06:08:21.075576 [error] [MainThread]:   Database Error in model stag_customer (models\staging\stag_customer.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'DL_NORTHWIND.STAGE.CUSTOMER' does not exist or not authorized.
+  compiled code at target\run\nse_data_dsf\models\staging\stag_customer.sql
+[0m06:08:21.077585 [info ] [MainThread]: 
+[0m06:08:21.078586 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m06:08:21.082133 [debug] [MainThread]: Command `dbt run` failed at 06:08:21.082133 after 7.08 seconds
+[0m06:08:21.083148 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000224621C6970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022461DC79A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022460A3EDC0>]}
+[0m06:08:21.085144 [debug] [MainThread]: Flushing usage events
+[0m06:08:21.359807 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:13:35.208668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001622F696970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162313295B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001622DC6FDC0>]}
+
+
+============================== 06:13:35.215225 | a7f6bea3-3cff-4a75-856a-62c58b058684 ==============================
+[0m06:13:35.215225 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m06:13:35.216944 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\talla\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\talla\\Desktop\\MyProjects\\dbt_sf_J25\\nse_data_dsf\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m06:13:38.118478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a7f6bea3-3cff-4a75-856a-62c58b058684', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001624A6E1C70>]}
+[0m06:13:38.227246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a7f6bea3-3cff-4a75-856a-62c58b058684', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001622F2BBF40>]}
+[0m06:13:38.229763 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m06:13:38.248339 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m06:13:38.669107 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:13:38.670112 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:13:38.748322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a7f6bea3-3cff-4a75-856a-62c58b058684', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001624AAA58E0>]}
+[0m06:13:38.993535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a7f6bea3-3cff-4a75-856a-62c58b058684', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001624AB2DB20>]}
+[0m06:13:38.994536 [info ] [MainThread]: Found 1 model, 20 sources, 454 macros
+[0m06:13:38.996531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a7f6bea3-3cff-4a75-856a-62c58b058684', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001624AAD3700>]}
+[0m06:13:38.999797 [info ] [MainThread]: 
+[0m06:13:39.002035 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m06:13:39.003013 [info ] [MainThread]: 
+[0m06:13:39.004032 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m06:13:39.009023 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DL_NORTHWIND'
+[0m06:13:39.041159 [debug] [ThreadPool]: Using snowflake connection "list_DL_NORTHWIND"
+[0m06:13:39.042160 [debug] [ThreadPool]: On list_DL_NORTHWIND: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "list_DL_NORTHWIND"} */
+show terse schemas in database DL_NORTHWIND
+    limit 10000
+[0m06:13:39.043151 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:13:40.003100 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.959 seconds
+[0m06:13:40.006100 [debug] [ThreadPool]: On list_DL_NORTHWIND: Close
+[0m06:13:40.124445 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DL_NORTHWIND_RAW'
+[0m06:13:40.174658 [debug] [ThreadPool]: Using snowflake connection "list_DL_NORTHWIND_RAW"
+[0m06:13:40.175656 [debug] [ThreadPool]: On list_DL_NORTHWIND_RAW: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "list_DL_NORTHWIND_RAW"} */
+show objects in DL_NORTHWIND.RAW limit 10000
+[0m06:13:40.176657 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:13:40.680930 [debug] [ThreadPool]: SQL status: SUCCESS 21 in 0.504 seconds
+[0m06:13:40.685928 [debug] [ThreadPool]: On list_DL_NORTHWIND_RAW: Close
+[0m06:13:40.788964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a7f6bea3-3cff-4a75-856a-62c58b058684', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001624ABA62B0>]}
+[0m06:13:40.811089 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_customer
+[0m06:13:40.812095 [info ] [Thread-1  ]: 1 of 1 START sql view model RAW.stag_customer .................................. [RUN]
+[0m06:13:40.814177 [debug] [Thread-1  ]: Acquiring new snowflake connection 'model.nse_data_dsf.stag_customer'
+[0m06:13:40.815198 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_customer
+[0m06:13:40.864122 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_customer"
+[0m06:13:40.867145 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_customer
+[0m06:13:40.971328 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_customer"
+[0m06:13:40.974320 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_customer"
+[0m06:13:40.976334 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_customer"} */
+create or replace   view DL_NORTHWIND.RAW.stag_customer
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.customer
+)
+select * from source
+  );
+[0m06:13:40.976334 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m06:13:41.751768 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.775 seconds
+[0m06:13:41.818503 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: Close
+[0m06:13:41.919100 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a7f6bea3-3cff-4a75-856a-62c58b058684', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001624ADB0B50>]}
+[0m06:13:41.921101 [info ] [Thread-1  ]: 1 of 1 OK created sql view model RAW.stag_customer ............................. [[32mSUCCESS 1[0m in 1.10s]
+[0m06:13:41.922956 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_customer
+[0m06:13:41.924947 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:13:41.925955 [debug] [MainThread]: Connection 'list_DL_NORTHWIND' was properly closed.
+[0m06:13:41.926966 [debug] [MainThread]: Connection 'list_DL_NORTHWIND_RAW' was properly closed.
+[0m06:13:41.926966 [debug] [MainThread]: Connection 'model.nse_data_dsf.stag_customer' was properly closed.
+[0m06:13:41.927966 [info ] [MainThread]: 
+[0m06:13:41.929956 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.92 seconds (2.92s).
+[0m06:13:41.932052 [debug] [MainThread]: Command end result
+[0m06:13:42.145033 [info ] [MainThread]: 
+[0m06:13:42.147574 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m06:13:42.149604 [info ] [MainThread]: 
+[0m06:13:42.150605 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m06:13:42.153589 [debug] [MainThread]: Command `dbt run` succeeded at 06:13:42.153589 after 7.05 seconds
+[0m06:13:42.154586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001622F696970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001624A7AEA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001622F2A2040>]}
+[0m06:13:42.155583 [debug] [MainThread]: Flushing usage events
+[0m06:13:42.441810 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:21:46.188545 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242E4387910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242E6019790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242E6019970>]}
+
+
+============================== 06:21:46.198735 | a90ea3e4-0e33-408b-ab2c-00d281d7b5f7 ==============================
+[0m06:21:46.198735 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m06:21:46.200853 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\talla\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\talla\\Desktop\\MyProjects\\dbt_sf_J25\\nse_data_dsf\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m06:21:49.705361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a90ea3e4-0e33-408b-ab2c-00d281d7b5f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242E2B7D040>]}
+[0m06:21:49.820286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a90ea3e4-0e33-408b-ab2c-00d281d7b5f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242E61AF760>]}
+[0m06:21:49.822288 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m06:21:49.842207 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m06:21:50.052185 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m06:21:50.054204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a90ea3e4-0e33-408b-ab2c-00d281d7b5f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242E5C9D1F0>]}
+[0m06:21:52.737790 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a90ea3e4-0e33-408b-ab2c-00d281d7b5f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242FF8527F0>]}
+[0m06:21:52.991622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a90ea3e4-0e33-408b-ab2c-00d281d7b5f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242FFA65B50>]}
+[0m06:21:52.992634 [info ] [MainThread]: Found 1 model, 20 sources, 454 macros
+[0m06:21:52.994622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a90ea3e4-0e33-408b-ab2c-00d281d7b5f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242FF9A8EB0>]}
+[0m06:21:52.998164 [info ] [MainThread]: 
+[0m06:21:52.999300 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m06:21:53.001345 [info ] [MainThread]: 
+[0m06:21:53.003333 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m06:21:53.007342 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DL_NORTHWIND'
+[0m06:21:53.035965 [debug] [ThreadPool]: Using snowflake connection "list_DL_NORTHWIND"
+[0m06:21:53.036964 [debug] [ThreadPool]: On list_DL_NORTHWIND: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "list_DL_NORTHWIND"} */
+show terse schemas in database DL_NORTHWIND
+    limit 10000
+[0m06:21:53.036964 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:21:53.824660 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.788 seconds
+[0m06:21:53.827660 [debug] [ThreadPool]: On list_DL_NORTHWIND: Close
+[0m06:21:53.939805 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_DL_NORTHWIND, now create_DL_NORTHWIND_RAW_stage)
+[0m06:21:53.940815 [debug] [ThreadPool]: Creating schema "database: "DL_NORTHWIND"
+schema: "RAW_stage"
+"
+[0m06:21:53.950318 [debug] [ThreadPool]: Using snowflake connection "create_DL_NORTHWIND_RAW_stage"
+[0m06:21:53.951318 [debug] [ThreadPool]: On create_DL_NORTHWIND_RAW_stage: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "create_DL_NORTHWIND_RAW_stage"} */
+create schema if not exists DL_NORTHWIND.RAW_stage
+[0m06:21:53.952327 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m06:21:54.442451 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.490 seconds
+[0m06:21:54.443440 [debug] [ThreadPool]: On create_DL_NORTHWIND_RAW_stage: Close
+[0m06:21:54.540940 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DL_NORTHWIND_RAW_stage'
+[0m06:21:54.559498 [debug] [ThreadPool]: Using snowflake connection "list_DL_NORTHWIND_RAW_stage"
+[0m06:21:54.560500 [debug] [ThreadPool]: On list_DL_NORTHWIND_RAW_stage: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "list_DL_NORTHWIND_RAW_stage"} */
+show objects in DL_NORTHWIND.RAW_stage limit 10000
+[0m06:21:54.561502 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:21:54.970287 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.409 seconds
+[0m06:21:54.973296 [debug] [ThreadPool]: On list_DL_NORTHWIND_RAW_stage: Close
+[0m06:21:55.110707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a90ea3e4-0e33-408b-ab2c-00d281d7b5f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242FFDDAE80>]}
+[0m06:21:55.119310 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_customer
+[0m06:21:55.120310 [info ] [Thread-1  ]: 1 of 1 START sql table model RAW_stage.stag_customer ........................... [RUN]
+[0m06:21:55.122319 [debug] [Thread-1  ]: Acquiring new snowflake connection 'model.nse_data_dsf.stag_customer'
+[0m06:21:55.123323 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_customer
+[0m06:21:55.140687 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_customer"
+[0m06:21:55.142707 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_customer
+[0m06:21:55.204498 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_customer"
+[0m06:21:55.208505 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_customer"
+[0m06:21:55.209503 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_customer"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_customer
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.customer
+)
+select * from source
+        );
+[0m06:21:55.210498 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m06:21:56.524278 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.314 seconds
+[0m06:21:56.570617 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: Close
+[0m06:21:56.702868 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a90ea3e4-0e33-408b-ab2c-00d281d7b5f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242FFE18FA0>]}
+[0m06:21:56.704868 [info ] [Thread-1  ]: 1 of 1 OK created sql table model RAW_stage.stag_customer ...................... [[32mSUCCESS 1[0m in 1.58s]
+[0m06:21:56.707859 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_customer
+[0m06:21:56.723155 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:21:56.724151 [debug] [MainThread]: Connection 'create_DL_NORTHWIND_RAW_stage' was properly closed.
+[0m06:21:56.724151 [debug] [MainThread]: Connection 'list_DL_NORTHWIND_RAW_stage' was properly closed.
+[0m06:21:56.725165 [debug] [MainThread]: Connection 'model.nse_data_dsf.stag_customer' was properly closed.
+[0m06:21:56.726151 [info ] [MainThread]: 
+[0m06:21:56.727153 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 3.72 seconds (3.72s).
+[0m06:21:56.730154 [debug] [MainThread]: Command end result
+[0m06:21:56.943398 [info ] [MainThread]: 
+[0m06:21:56.945418 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m06:21:56.947670 [info ] [MainThread]: 
+[0m06:21:56.948669 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m06:21:56.952982 [debug] [MainThread]: Command `dbt run` succeeded at 06:21:56.952982 after 10.87 seconds
+[0m06:21:56.953985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242E4387910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242E476E640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242FF9343A0>]}
+[0m06:21:56.954993 [debug] [MainThread]: Flushing usage events
+[0m06:21:57.260140 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:38:13.043862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A79C1D09A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A79DE675E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A79C140BE0>]}
+
+
+============================== 06:38:13.055980 | 8a9169fa-09e7-4d0f-915b-ef0c71562630 ==============================
+[0m06:38:13.055980 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m06:38:13.058018 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\talla\\Desktop\\MyProjects\\dbt_sf_J25\\nse_data_dsf\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\talla\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m06:38:17.599412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7215DC0>]}
+[0m06:38:17.770866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B722C070>]}
+[0m06:38:17.773867 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m06:38:17.804529 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m06:38:18.453489 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 19 files added, 0 files changed.
+[0m06:38:18.455001 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stg_employees.sql
+[0m06:38:18.455574 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_suppliers.sql
+[0m06:38:18.456588 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_shippers.sql
+[0m06:38:18.457598 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_privileges.sql
+[0m06:38:18.458617 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_purchase_order_details.sql
+[0m06:38:18.459602 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_orders.sql
+[0m06:38:18.460601 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_purchase_order_status.sql
+[0m06:38:18.460601 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_inventory_transactions.sql
+[0m06:38:18.461603 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_employee_privileges.sql
+[0m06:38:18.463117 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_sales_reports.sql
+[0m06:38:18.465136 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_orders_tax_status.sql
+[0m06:38:18.466666 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_products.sql
+[0m06:38:18.468665 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_order_details.sql
+[0m06:38:18.470660 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_order_details_status.sql
+[0m06:38:18.471660 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_invoices.sql
+[0m06:38:18.473654 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_strings.sql
+[0m06:38:18.475161 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_inventory_transaction_types.sql
+[0m06:38:18.476175 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_orders_status.sql
+[0m06:38:18.477177 [debug] [MainThread]: Partial parsing: added file: nse_data_dsf://models\staging\stag_purchase_orders.sql
+[0m06:38:19.255217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7764F40>]}
+[0m06:38:19.636354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7704C40>]}
+[0m06:38:19.637353 [info ] [MainThread]: Found 20 models, 20 sources, 454 macros
+[0m06:38:19.639371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7405C70>]}
+[0m06:38:19.643381 [info ] [MainThread]: 
+[0m06:38:19.645864 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m06:38:19.646878 [info ] [MainThread]: 
+[0m06:38:19.649904 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m06:38:19.668170 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DL_NORTHWIND'
+[0m06:38:19.701688 [debug] [ThreadPool]: Using snowflake connection "list_DL_NORTHWIND"
+[0m06:38:19.702696 [debug] [ThreadPool]: On list_DL_NORTHWIND: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "list_DL_NORTHWIND"} */
+show terse schemas in database DL_NORTHWIND
+    limit 10000
+[0m06:38:19.703691 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:38:20.727625 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.024 seconds
+[0m06:38:20.732162 [debug] [ThreadPool]: On list_DL_NORTHWIND: Close
+[0m06:38:20.842565 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DL_NORTHWIND_RAW_stage'
+[0m06:38:20.895900 [debug] [ThreadPool]: Using snowflake connection "list_DL_NORTHWIND_RAW_stage"
+[0m06:38:20.896429 [debug] [ThreadPool]: On list_DL_NORTHWIND_RAW_stage: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "list_DL_NORTHWIND_RAW_stage"} */
+show objects in DL_NORTHWIND.RAW_stage limit 10000
+[0m06:38:20.897446 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:38:21.395304 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.498 seconds
+[0m06:38:21.398858 [debug] [ThreadPool]: On list_DL_NORTHWIND_RAW_stage: Close
+[0m06:38:21.520979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B734F1F0>]}
+[0m06:38:21.545550 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_customer
+[0m06:38:21.547677 [info ] [Thread-1  ]: 1 of 20 START sql table model RAW_stage.stag_customer .......................... [RUN]
+[0m06:38:21.550674 [debug] [Thread-1  ]: Acquiring new snowflake connection 'model.nse_data_dsf.stag_customer'
+[0m06:38:21.551672 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_customer
+[0m06:38:21.588940 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_customer"
+[0m06:38:21.590934 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_customer
+[0m06:38:21.732985 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_customer"
+[0m06:38:21.737515 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_customer"
+[0m06:38:21.738510 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_customer"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_customer
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.customer
+)
+select * from source
+        );
+[0m06:38:21.739510 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m06:38:22.934011 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.196 seconds
+[0m06:38:22.996771 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: Close
+[0m06:38:23.156795 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B6A62430>]}
+[0m06:38:23.158807 [info ] [Thread-1  ]: 1 of 20 OK created sql table model RAW_stage.stag_customer ..................... [[32mSUCCESS 1[0m in 1.60s]
+[0m06:38:23.161486 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_customer
+[0m06:38:23.162484 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_employee_privileges
+[0m06:38:23.163499 [info ] [Thread-1  ]: 2 of 20 START sql table model RAW_stage.stag_employee_privileges ............... [RUN]
+[0m06:38:23.165707 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_customer, now model.nse_data_dsf.stag_employee_privileges)
+[0m06:38:23.167812 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_employee_privileges
+[0m06:38:23.191485 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_employee_privileges"
+[0m06:38:23.193500 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_employee_privileges
+[0m06:38:23.239565 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_employee_privileges"
+[0m06:38:23.243575 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_employee_privileges"
+[0m06:38:23.244575 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_employee_privileges: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_employee_privileges"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_employee_privileges
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.employee_privileges
+)
+select * from source
+        );
+[0m06:38:23.245573 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:24.345318 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.100 seconds
+[0m06:38:24.349870 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_employee_privileges: Close
+[0m06:38:24.479883 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7B907F0>]}
+[0m06:38:24.481925 [info ] [Thread-1  ]: 2 of 20 OK created sql table model RAW_stage.stag_employee_privileges .......... [[32mSUCCESS 1[0m in 1.31s]
+[0m06:38:24.483911 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_employee_privileges
+[0m06:38:24.486438 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_inventory_transaction_types
+[0m06:38:24.487441 [info ] [Thread-1  ]: 3 of 20 START sql table model RAW_stage.stag_inventory_transaction_types ....... [RUN]
+[0m06:38:24.489449 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_employee_privileges, now model.nse_data_dsf.stag_inventory_transaction_types)
+[0m06:38:24.490451 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_inventory_transaction_types
+[0m06:38:24.515578 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_inventory_transaction_types"
+[0m06:38:24.531233 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_inventory_transaction_types
+[0m06:38:24.578818 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_inventory_transaction_types"
+[0m06:38:24.583564 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_inventory_transaction_types"
+[0m06:38:24.584734 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_inventory_transaction_types: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_inventory_transaction_types"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_inventory_transaction_types
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.inventory_transaction_types
+)
+select * from source
+        );
+[0m06:38:24.586442 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:25.698760 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.113 seconds
+[0m06:38:25.703770 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_inventory_transaction_types: Close
+[0m06:38:25.820746 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7BF1D30>]}
+[0m06:38:25.822747 [info ] [Thread-1  ]: 3 of 20 OK created sql table model RAW_stage.stag_inventory_transaction_types .. [[32mSUCCESS 1[0m in 1.33s]
+[0m06:38:25.838232 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_inventory_transaction_types
+[0m06:38:25.839209 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_inventory_transactions
+[0m06:38:25.841208 [info ] [Thread-1  ]: 4 of 20 START sql table model RAW_stage.stag_inventory_transactions ............ [RUN]
+[0m06:38:25.843213 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_inventory_transaction_types, now model.nse_data_dsf.stag_inventory_transactions)
+[0m06:38:25.844223 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_inventory_transactions
+[0m06:38:25.868372 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_inventory_transactions"
+[0m06:38:25.872378 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_inventory_transactions
+[0m06:38:25.918835 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_inventory_transactions"
+[0m06:38:25.921838 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_inventory_transactions"
+[0m06:38:25.922842 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_inventory_transactions: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_inventory_transactions"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_inventory_transactions
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.inventory_transactions
+)
+select * from source
+        );
+[0m06:38:25.924842 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:27.005826 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.081 seconds
+[0m06:38:27.009976 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_inventory_transactions: Close
+[0m06:38:27.120753 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7B70580>]}
+[0m06:38:27.122753 [info ] [Thread-1  ]: 4 of 20 OK created sql table model RAW_stage.stag_inventory_transactions ....... [[32mSUCCESS 1[0m in 1.28s]
+[0m06:38:27.126243 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_inventory_transactions
+[0m06:38:27.127260 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_invoices
+[0m06:38:27.128258 [info ] [Thread-1  ]: 5 of 20 START sql table model RAW_stage.stag_invoices .......................... [RUN]
+[0m06:38:27.130806 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_inventory_transactions, now model.nse_data_dsf.stag_invoices)
+[0m06:38:27.131808 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_invoices
+[0m06:38:27.156599 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_invoices"
+[0m06:38:27.159605 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_invoices
+[0m06:38:27.207136 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_invoices"
+[0m06:38:27.210149 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_invoices"
+[0m06:38:27.211150 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_invoices: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_invoices"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_invoices
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.invoices
+)
+select * from source
+        );
+[0m06:38:27.212152 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:28.296552 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.084 seconds
+[0m06:38:28.301595 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_invoices: Close
+[0m06:38:28.428676 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7C27250>]}
+[0m06:38:28.431222 [info ] [Thread-1  ]: 5 of 20 OK created sql table model RAW_stage.stag_invoices ..................... [[32mSUCCESS 1[0m in 1.30s]
+[0m06:38:28.434221 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_invoices
+[0m06:38:28.435737 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_order_details
+[0m06:38:28.437772 [info ] [Thread-1  ]: 6 of 20 START sql table model RAW_stage.stag_order_details ..................... [RUN]
+[0m06:38:28.439751 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_invoices, now model.nse_data_dsf.stag_order_details)
+[0m06:38:28.440764 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_order_details
+[0m06:38:28.466050 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_order_details"
+[0m06:38:28.470072 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_order_details
+[0m06:38:28.517868 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_order_details"
+[0m06:38:28.521875 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_order_details"
+[0m06:38:28.523869 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_order_details: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_order_details"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_order_details
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.order_details
+)
+select * from source
+        );
+[0m06:38:28.523869 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:29.371243 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.847 seconds
+[0m06:38:29.375754 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_order_details: Close
+[0m06:38:29.484852 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7B81FA0>]}
+[0m06:38:29.486939 [info ] [Thread-1  ]: 6 of 20 OK created sql table model RAW_stage.stag_order_details ................ [[32mSUCCESS 1[0m in 1.05s]
+[0m06:38:29.488957 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_order_details
+[0m06:38:29.489957 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_order_details_status
+[0m06:38:29.491957 [info ] [Thread-1  ]: 7 of 20 START sql table model RAW_stage.stag_order_details_status .............. [RUN]
+[0m06:38:29.494126 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_order_details, now model.nse_data_dsf.stag_order_details_status)
+[0m06:38:29.494126 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_order_details_status
+[0m06:38:29.520173 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_order_details_status"
+[0m06:38:29.523162 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_order_details_status
+[0m06:38:29.564167 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_order_details_status"
+[0m06:38:29.569359 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_order_details_status"
+[0m06:38:29.570813 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_order_details_status: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_order_details_status"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_order_details_status
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.order_details_status
+)
+select * from source
+        );
+[0m06:38:29.571323 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:30.645791 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.073 seconds
+[0m06:38:30.649821 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_order_details_status: Close
+[0m06:38:30.788730 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7C08520>]}
+[0m06:38:30.789726 [info ] [Thread-1  ]: 7 of 20 OK created sql table model RAW_stage.stag_order_details_status ......... [[32mSUCCESS 1[0m in 1.30s]
+[0m06:38:30.801131 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_order_details_status
+[0m06:38:30.802121 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_orders
+[0m06:38:30.803123 [info ] [Thread-1  ]: 8 of 20 START sql table model RAW_stage.stag_orders ............................ [RUN]
+[0m06:38:30.805654 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_order_details_status, now model.nse_data_dsf.stag_orders)
+[0m06:38:30.806671 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_orders
+[0m06:38:30.832043 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_orders"
+[0m06:38:30.835588 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_orders
+[0m06:38:30.879881 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_orders"
+[0m06:38:30.884185 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_orders"
+[0m06:38:30.885701 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_orders"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_orders
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.orders
+)
+select * from source
+        );
+[0m06:38:30.886714 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:31.760195 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.873 seconds
+[0m06:38:31.764005 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders: Close
+[0m06:38:31.888445 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7C1C250>]}
+[0m06:38:31.889457 [info ] [Thread-1  ]: 8 of 20 OK created sql table model RAW_stage.stag_orders ....................... [[32mSUCCESS 1[0m in 1.08s]
+[0m06:38:31.892430 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_orders
+[0m06:38:31.893451 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_orders_status
+[0m06:38:31.895440 [info ] [Thread-1  ]: 9 of 20 START sql table model RAW_stage.stag_orders_status ..................... [RUN]
+[0m06:38:31.897524 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_orders, now model.nse_data_dsf.stag_orders_status)
+[0m06:38:31.898543 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_orders_status
+[0m06:38:31.924170 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_orders_status"
+[0m06:38:31.927751 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_orders_status
+[0m06:38:31.978639 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_orders_status"
+[0m06:38:31.982168 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_orders_status"
+[0m06:38:31.983179 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders_status: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_orders_status"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_orders_status
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.orders_status
+)
+select * from source
+        );
+[0m06:38:31.984163 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:32.828250 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.845 seconds
+[0m06:38:32.833792 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders_status: Close
+[0m06:38:32.948037 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7C1CF40>]}
+[0m06:38:32.950028 [info ] [Thread-1  ]: 9 of 20 OK created sql table model RAW_stage.stag_orders_status ................ [[32mSUCCESS 1[0m in 1.05s]
+[0m06:38:32.954024 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_orders_status
+[0m06:38:32.955535 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_orders_tax_status
+[0m06:38:32.956556 [info ] [Thread-1  ]: 10 of 20 START sql table model RAW_stage.stag_orders_tax_status ................ [RUN]
+[0m06:38:32.959563 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_orders_status, now model.nse_data_dsf.stag_orders_tax_status)
+[0m06:38:32.960560 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_orders_tax_status
+[0m06:38:32.993850 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_orders_tax_status"
+[0m06:38:32.995844 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_orders_tax_status
+[0m06:38:33.044197 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_orders_tax_status"
+[0m06:38:33.047841 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_orders_tax_status"
+[0m06:38:33.048840 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders_tax_status: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_orders_tax_status"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_orders_tax_status
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.orders_tax_status
+)
+select * from source
+        );
+[0m06:38:33.050846 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:33.979826 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.929 seconds
+[0m06:38:33.984930 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders_tax_status: Close
+[0m06:38:34.089388 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7AEF370>]}
+[0m06:38:34.090390 [info ] [Thread-1  ]: 10 of 20 OK created sql table model RAW_stage.stag_orders_tax_status ........... [[32mSUCCESS 1[0m in 1.13s]
+[0m06:38:34.093390 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_orders_tax_status
+[0m06:38:34.094388 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_privileges
+[0m06:38:34.095918 [info ] [Thread-1  ]: 11 of 20 START sql table model RAW_stage.stag_privileges ....................... [RUN]
+[0m06:38:34.098496 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_orders_tax_status, now model.nse_data_dsf.stag_privileges)
+[0m06:38:34.099501 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_privileges
+[0m06:38:34.127654 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_privileges"
+[0m06:38:34.130165 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_privileges
+[0m06:38:34.175703 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_privileges"
+[0m06:38:34.178713 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_privileges"
+[0m06:38:34.178713 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_privileges: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_privileges"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_privileges
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.privileges
+)
+select * from source
+        );
+[0m06:38:34.181246 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:34.905988 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.725 seconds
+[0m06:38:34.910077 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_privileges: Close
+[0m06:38:34.999114 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7BDDA30>]}
+[0m06:38:35.001275 [info ] [Thread-1  ]: 11 of 20 OK created sql table model RAW_stage.stag_privileges .................. [[32mSUCCESS 1[0m in 0.90s]
+[0m06:38:35.003964 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_privileges
+[0m06:38:35.005033 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_products
+[0m06:38:35.006047 [info ] [Thread-1  ]: 12 of 20 START sql table model RAW_stage.stag_products ......................... [RUN]
+[0m06:38:35.007647 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_privileges, now model.nse_data_dsf.stag_products)
+[0m06:38:35.009658 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_products
+[0m06:38:35.033964 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_products"
+[0m06:38:35.039128 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_products
+[0m06:38:35.095132 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_products"
+[0m06:38:35.099599 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_products"
+[0m06:38:35.101233 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_products: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_products"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_products
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.products
+)
+select * from source
+        );
+[0m06:38:35.102303 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:35.885047 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.783 seconds
+[0m06:38:35.889291 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_products: Close
+[0m06:38:35.991926 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7BCB760>]}
+[0m06:38:35.992920 [info ] [Thread-1  ]: 12 of 20 OK created sql table model RAW_stage.stag_products .................... [[32mSUCCESS 1[0m in 0.98s]
+[0m06:38:35.996446 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_products
+[0m06:38:35.997466 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_purchase_order_details
+[0m06:38:35.999464 [info ] [Thread-1  ]: 13 of 20 START sql table model RAW_stage.stag_purchase_order_details ........... [RUN]
+[0m06:38:36.002462 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_products, now model.nse_data_dsf.stag_purchase_order_details)
+[0m06:38:36.003463 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_purchase_order_details
+[0m06:38:36.036787 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_purchase_order_details"
+[0m06:38:36.040796 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_purchase_order_details
+[0m06:38:36.109758 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_purchase_order_details"
+[0m06:38:36.114294 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_purchase_order_details"
+[0m06:38:36.115809 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_order_details: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_purchase_order_details"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_purchase_order_details
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.purchase_order_details
+)
+select * from source
+        );
+[0m06:38:36.117835 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:36.864650 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.746 seconds
+[0m06:38:36.870212 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_order_details: Close
+[0m06:38:36.971386 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7ACEF40>]}
+[0m06:38:36.973387 [info ] [Thread-1  ]: 13 of 20 OK created sql table model RAW_stage.stag_purchase_order_details ...... [[32mSUCCESS 1[0m in 0.97s]
+[0m06:38:36.975908 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_purchase_order_details
+[0m06:38:36.976929 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_purchase_order_status
+[0m06:38:36.978935 [info ] [Thread-1  ]: 14 of 20 START sql table model RAW_stage.stag_purchase_order_status ............ [RUN]
+[0m06:38:36.981091 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_purchase_order_details, now model.nse_data_dsf.stag_purchase_order_status)
+[0m06:38:36.983085 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_purchase_order_status
+[0m06:38:37.013804 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_purchase_order_status"
+[0m06:38:37.018386 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_purchase_order_status
+[0m06:38:37.067848 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_purchase_order_status"
+[0m06:38:37.071851 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_purchase_order_status"
+[0m06:38:37.072861 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_order_status: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_purchase_order_status"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_purchase_order_status
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.purchase_order_status
+)
+select * from source
+        );
+[0m06:38:37.073861 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:38.081920 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.008 seconds
+[0m06:38:38.086465 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_order_status: Close
+[0m06:38:38.210158 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7C40940>]}
+[0m06:38:38.212177 [info ] [Thread-1  ]: 14 of 20 OK created sql table model RAW_stage.stag_purchase_order_status ....... [[32mSUCCESS 1[0m in 1.23s]
+[0m06:38:38.214361 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_purchase_order_status
+[0m06:38:38.215878 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_purchase_orders
+[0m06:38:38.217895 [info ] [Thread-1  ]: 15 of 20 START sql table model RAW_stage.stag_purchase_orders .................. [RUN]
+[0m06:38:38.219897 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_purchase_order_status, now model.nse_data_dsf.stag_purchase_orders)
+[0m06:38:38.220906 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_purchase_orders
+[0m06:38:38.246041 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_purchase_orders"
+[0m06:38:38.249618 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_purchase_orders
+[0m06:38:38.303526 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_purchase_orders"
+[0m06:38:38.307065 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_purchase_orders"
+[0m06:38:38.308096 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_orders: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_purchase_orders"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_purchase_orders
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.purchase_orders
+)
+select * from source
+        );
+[0m06:38:38.309095 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:39.307576 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.998 seconds
+[0m06:38:39.311584 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_orders: Close
+[0m06:38:39.406305 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7C72160>]}
+[0m06:38:39.408333 [info ] [Thread-1  ]: 15 of 20 OK created sql table model RAW_stage.stag_purchase_orders ............. [[32mSUCCESS 1[0m in 1.19s]
+[0m06:38:39.411327 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_purchase_orders
+[0m06:38:39.412327 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_sales_reports
+[0m06:38:39.413336 [info ] [Thread-1  ]: 16 of 20 START sql table model RAW_stage.stag_sales_reports .................... [RUN]
+[0m06:38:39.415986 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_purchase_orders, now model.nse_data_dsf.stag_sales_reports)
+[0m06:38:39.417002 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_sales_reports
+[0m06:38:39.445796 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_sales_reports"
+[0m06:38:39.450356 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_sales_reports
+[0m06:38:39.496793 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_sales_reports"
+[0m06:38:39.501322 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_sales_reports"
+[0m06:38:39.503316 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_sales_reports: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_sales_reports"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_sales_reports
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.sales_reports
+)
+select * from source
+        );
+[0m06:38:39.504315 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:41.110014 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.605 seconds
+[0m06:38:41.114534 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_sales_reports: Close
+[0m06:38:41.206092 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7C279A0>]}
+[0m06:38:41.208110 [info ] [Thread-1  ]: 16 of 20 OK created sql table model RAW_stage.stag_sales_reports ............... [[32mSUCCESS 1[0m in 1.79s]
+[0m06:38:41.211108 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_sales_reports
+[0m06:38:41.212107 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_shippers
+[0m06:38:41.213106 [info ] [Thread-1  ]: 17 of 20 START sql table model RAW_stage.stag_shippers ......................... [RUN]
+[0m06:38:41.215852 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_sales_reports, now model.nse_data_dsf.stag_shippers)
+[0m06:38:41.216867 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_shippers
+[0m06:38:41.243473 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_shippers"
+[0m06:38:41.247544 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_shippers
+[0m06:38:41.292594 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_shippers"
+[0m06:38:41.296106 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_shippers"
+[0m06:38:41.296649 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_shippers: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_shippers"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_shippers
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.shippers
+)
+select * from source
+        );
+[0m06:38:41.298682 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:42.397787 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.100 seconds
+[0m06:38:42.402798 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_shippers: Close
+[0m06:38:42.540588 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7C3F730>]}
+[0m06:38:42.542611 [info ] [Thread-1  ]: 17 of 20 OK created sql table model RAW_stage.stag_shippers .................... [[32mSUCCESS 1[0m in 1.33s]
+[0m06:38:42.545238 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_shippers
+[0m06:38:42.546274 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_strings
+[0m06:38:42.547828 [info ] [Thread-1  ]: 18 of 20 START sql table model RAW_stage.stag_strings .......................... [RUN]
+[0m06:38:42.549806 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_shippers, now model.nse_data_dsf.stag_strings)
+[0m06:38:42.550816 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_strings
+[0m06:38:42.575953 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_strings"
+[0m06:38:42.579162 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_strings
+[0m06:38:42.628144 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_strings"
+[0m06:38:42.631338 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_strings"
+[0m06:38:42.632340 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_strings: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_strings"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_strings
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.strings
+)
+select * from source
+        );
+[0m06:38:42.633343 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:43.497583 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.864 seconds
+[0m06:38:43.501579 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_strings: Close
+[0m06:38:43.636033 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7C47910>]}
+[0m06:38:43.637566 [info ] [Thread-1  ]: 18 of 20 OK created sql table model RAW_stage.stag_strings ..................... [[32mSUCCESS 1[0m in 1.09s]
+[0m06:38:43.640579 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_strings
+[0m06:38:43.641579 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_suppliers
+[0m06:38:43.642579 [info ] [Thread-1  ]: 19 of 20 START sql table model RAW_stage.stag_suppliers ........................ [RUN]
+[0m06:38:43.644578 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_strings, now model.nse_data_dsf.stag_suppliers)
+[0m06:38:43.646094 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_suppliers
+[0m06:38:43.671298 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_suppliers"
+[0m06:38:43.674309 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_suppliers
+[0m06:38:43.719191 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_suppliers"
+[0m06:38:43.723181 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_suppliers"
+[0m06:38:43.724182 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_suppliers: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_suppliers"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stag_suppliers
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.suppliers
+)
+select * from source
+        );
+[0m06:38:43.724182 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:44.496533 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.772 seconds
+[0m06:38:44.502544 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_suppliers: Close
+[0m06:38:44.604770 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7AEF760>]}
+[0m06:38:44.606282 [info ] [Thread-1  ]: 19 of 20 OK created sql table model RAW_stage.stag_suppliers ................... [[32mSUCCESS 1[0m in 0.96s]
+[0m06:38:44.609299 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_suppliers
+[0m06:38:44.610301 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stg_employees
+[0m06:38:44.611319 [info ] [Thread-1  ]: 20 of 20 START sql table model RAW_stage.stg_employees ......................... [RUN]
+[0m06:38:44.613300 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_suppliers, now model.nse_data_dsf.stg_employees)
+[0m06:38:44.614535 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stg_employees
+[0m06:38:44.640762 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stg_employees"
+[0m06:38:44.643769 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stg_employees
+[0m06:38:44.691106 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stg_employees"
+[0m06:38:44.694104 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stg_employees"
+[0m06:38:44.695106 [debug] [Thread-1  ]: On model.nse_data_dsf.stg_employees: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stg_employees"} */
+create or replace transient table DL_NORTHWIND.RAW_stage.stg_employees
+         as
+        (with source as (
+
+    select * from DL_NORTHWIND.stage.employees
+)
+select * from source
+        );
+[0m06:38:44.696615 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:38:45.580898 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.884 seconds
+[0m06:38:45.584891 [debug] [Thread-1  ]: On model.nse_data_dsf.stg_employees: Close
+[0m06:38:45.681212 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a9169fa-09e7-4d0f-915b-ef0c71562630', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A7B7BB6B50>]}
+[0m06:38:45.683184 [info ] [Thread-1  ]: 20 of 20 OK created sql table model RAW_stage.stg_employees .................... [[32mSUCCESS 1[0m in 1.07s]
+[0m06:38:45.686272 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stg_employees
+[0m06:38:45.702891 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:38:45.704892 [debug] [MainThread]: Connection 'list_DL_NORTHWIND' was properly closed.
+[0m06:38:45.705900 [debug] [MainThread]: Connection 'list_DL_NORTHWIND_RAW_stage' was properly closed.
+[0m06:38:45.706417 [debug] [MainThread]: Connection 'model.nse_data_dsf.stg_employees' was properly closed.
+[0m06:38:45.707435 [info ] [MainThread]: 
+[0m06:38:45.709520 [info ] [MainThread]: Finished running 20 table models in 0 hours 0 minutes and 26.06 seconds (26.06s).
+[0m06:38:45.719081 [debug] [MainThread]: Command end result
+[0m06:38:46.006086 [info ] [MainThread]: 
+[0m06:38:46.008104 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m06:38:46.010099 [info ] [MainThread]: 
+[0m06:38:46.011343 [info ] [MainThread]: Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+[0m06:38:46.016161 [debug] [MainThread]: Command `dbt run` succeeded at 06:38:46.014627 after 33.09 seconds
+[0m06:38:46.017203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A79C1D09A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A79C5C8190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A79BDEB0D0>]}
+[0m06:38:46.018215 [debug] [MainThread]: Flushing usage events
+[0m06:38:46.373617 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:40:18.777219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020574EC68E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002057348FD30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020576784BB0>]}
+
+
+============================== 06:40:18.786822 | 277461d6-4759-4fd5-8bbd-5456df4d6778 ==============================
+[0m06:40:18.786822 [info ] [MainThread]: Running with dbt=1.9.0-b2
+[0m06:40:18.789824 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\talla\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\talla\\Desktop\\MyProjects\\dbt_sf_J25\\nse_data_dsf\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --full-refresh', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m06:40:23.273039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020573696FA0>]}
+[0m06:40:23.390938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020573708C40>]}
+[0m06:40:23.393931 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m06:40:23.420957 [debug] [MainThread]: checksum: 4cfbbe2a671212f062e88a43cba5322b30b7e3e8e91b953aa4de249eeaade60f, vars: {}, profile: , target: , version: 1.9.0b2
+[0m06:40:23.710089 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m06:40:23.712094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205767DE1C0>]}
+[0m06:40:27.223810 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205105DF8B0>]}
+[0m06:40:27.505665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020510717D30>]}
+[0m06:40:27.506675 [info ] [MainThread]: Found 20 models, 20 sources, 454 macros
+[0m06:40:27.508677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205106B9100>]}
+[0m06:40:27.514216 [info ] [MainThread]: 
+[0m06:40:27.515747 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m06:40:27.516744 [info ] [MainThread]: 
+[0m06:40:27.518743 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m06:40:27.534611 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DL_NORTHWIND'
+[0m06:40:27.564823 [debug] [ThreadPool]: Using snowflake connection "list_DL_NORTHWIND"
+[0m06:40:27.565829 [debug] [ThreadPool]: On list_DL_NORTHWIND: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "list_DL_NORTHWIND"} */
+show terse schemas in database DL_NORTHWIND
+    limit 10000
+[0m06:40:27.566827 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:40:28.406296 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.839 seconds
+[0m06:40:28.409308 [debug] [ThreadPool]: On list_DL_NORTHWIND: Close
+[0m06:40:28.523903 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DL_NORTHWIND_RAW_stage'
+[0m06:40:28.542105 [debug] [ThreadPool]: Using snowflake connection "list_DL_NORTHWIND_RAW_stage"
+[0m06:40:28.543102 [debug] [ThreadPool]: On list_DL_NORTHWIND_RAW_stage: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "connection_name": "list_DL_NORTHWIND_RAW_stage"} */
+show objects in DL_NORTHWIND.RAW_stage limit 10000
+[0m06:40:28.544091 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:40:29.238340 [debug] [ThreadPool]: SQL status: SUCCESS 20 in 0.695 seconds
+[0m06:40:29.242349 [debug] [ThreadPool]: On list_DL_NORTHWIND_RAW_stage: Close
+[0m06:40:29.343248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020510A5DE80>]}
+[0m06:40:29.357413 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_customer
+[0m06:40:29.358408 [info ] [Thread-1  ]: 1 of 20 START sql view model RAW_stage.stag_customer ........................... [RUN]
+[0m06:40:29.361415 [debug] [Thread-1  ]: Acquiring new snowflake connection 'model.nse_data_dsf.stag_customer'
+[0m06:40:29.362413 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_customer
+[0m06:40:29.381562 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_customer"
+[0m06:40:29.385092 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_customer
+[0m06:40:29.445487 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_CUSTOMER" because it is of type table
+[0m06:40:29.615885 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_CUSTOMER"
+[0m06:40:29.628418 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_customer"
+[0m06:40:29.629942 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_customer"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_CUSTOMER" cascade
+[0m06:40:29.631959 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m06:40:30.161700 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.530 seconds
+[0m06:40:30.185589 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_customer"
+[0m06:40:30.188906 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_customer"
+[0m06:40:30.190012 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_customer"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_customer
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.customer
+)
+select * from source
+  );
+[0m06:40:30.616248 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.425 seconds
+[0m06:40:30.684503 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_customer: Close
+[0m06:40:30.796588 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020510AAEFD0>]}
+[0m06:40:30.798608 [info ] [Thread-1  ]: 1 of 20 OK created sql view model RAW_stage.stag_customer ...................... [[32mSUCCESS 1[0m in 1.43s]
+[0m06:40:30.802601 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_customer
+[0m06:40:30.804111 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_employee_privileges
+[0m06:40:30.805132 [info ] [Thread-1  ]: 2 of 20 START sql view model RAW_stage.stag_employee_privileges ................ [RUN]
+[0m06:40:30.807129 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_customer, now model.nse_data_dsf.stag_employee_privileges)
+[0m06:40:30.808127 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_employee_privileges
+[0m06:40:30.864173 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_employee_privileges"
+[0m06:40:30.869574 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_employee_privileges
+[0m06:40:30.898519 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_EMPLOYEE_PRIVILEGES" because it is of type table
+[0m06:40:30.942536 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_EMPLOYEE_PRIVILEGES"
+[0m06:40:30.945066 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_employee_privileges"
+[0m06:40:30.945066 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_employee_privileges: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_employee_privileges"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_EMPLOYEE_PRIVILEGES" cascade
+[0m06:40:30.947592 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:31.360235 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.413 seconds
+[0m06:40:31.363260 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_employee_privileges"
+[0m06:40:31.367449 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_employee_privileges"
+[0m06:40:31.368449 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_employee_privileges: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_employee_privileges"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_employee_privileges
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.employee_privileges
+)
+select * from source
+  );
+[0m06:40:31.639752 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.270 seconds
+[0m06:40:31.642771 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_employee_privileges: Close
+[0m06:40:31.754436 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205100E2040>]}
+[0m06:40:31.756451 [info ] [Thread-1  ]: 2 of 20 OK created sql view model RAW_stage.stag_employee_privileges ........... [[32mSUCCESS 1[0m in 0.95s]
+[0m06:40:31.759438 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_employee_privileges
+[0m06:40:31.760439 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_inventory_transaction_types
+[0m06:40:31.761443 [info ] [Thread-1  ]: 3 of 20 START sql view model RAW_stage.stag_inventory_transaction_types ........ [RUN]
+[0m06:40:31.763953 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_employee_privileges, now model.nse_data_dsf.stag_inventory_transaction_types)
+[0m06:40:31.764973 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_inventory_transaction_types
+[0m06:40:31.822261 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_inventory_transaction_types"
+[0m06:40:31.825778 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_inventory_transaction_types
+[0m06:40:31.856869 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_INVENTORY_TRANSACTION_TYPES" because it is of type table
+[0m06:40:31.905465 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_INVENTORY_TRANSACTION_TYPES"
+[0m06:40:31.908467 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_inventory_transaction_types"
+[0m06:40:31.909462 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_inventory_transaction_types: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_inventory_transaction_types"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_INVENTORY_TRANSACTION_TYPES" cascade
+[0m06:40:31.910467 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:32.425010 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.514 seconds
+[0m06:40:32.428023 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_inventory_transaction_types"
+[0m06:40:32.432185 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_inventory_transaction_types"
+[0m06:40:32.434186 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_inventory_transaction_types: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_inventory_transaction_types"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_inventory_transaction_types
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.inventory_transaction_types
+)
+select * from source
+  );
+[0m06:40:32.744052 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.309 seconds
+[0m06:40:32.748604 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_inventory_transaction_types: Close
+[0m06:40:32.858384 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002051049E490>]}
+[0m06:40:32.859382 [info ] [Thread-1  ]: 3 of 20 OK created sql view model RAW_stage.stag_inventory_transaction_types ... [[32mSUCCESS 1[0m in 1.09s]
+[0m06:40:32.862385 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_inventory_transaction_types
+[0m06:40:32.863909 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_inventory_transactions
+[0m06:40:32.866924 [info ] [Thread-1  ]: 4 of 20 START sql view model RAW_stage.stag_inventory_transactions ............. [RUN]
+[0m06:40:32.869930 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_inventory_transaction_types, now model.nse_data_dsf.stag_inventory_transactions)
+[0m06:40:32.871930 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_inventory_transactions
+[0m06:40:32.925994 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_inventory_transactions"
+[0m06:40:32.929004 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_inventory_transactions
+[0m06:40:32.959313 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_INVENTORY_TRANSACTIONS" because it is of type table
+[0m06:40:33.009211 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_INVENTORY_TRANSACTIONS"
+[0m06:40:33.011211 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_inventory_transactions"
+[0m06:40:33.012209 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_inventory_transactions: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_inventory_transactions"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_INVENTORY_TRANSACTIONS" cascade
+[0m06:40:33.013211 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:33.488344 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.475 seconds
+[0m06:40:33.493340 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_inventory_transactions"
+[0m06:40:33.496873 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_inventory_transactions"
+[0m06:40:33.499336 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_inventory_transactions: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_inventory_transactions"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_inventory_transactions
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.inventory_transactions
+)
+select * from source
+  );
+[0m06:40:33.827637 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.326 seconds
+[0m06:40:33.832164 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_inventory_transactions: Close
+[0m06:40:33.928382 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020510750FA0>]}
+[0m06:40:33.930929 [info ] [Thread-1  ]: 4 of 20 OK created sql view model RAW_stage.stag_inventory_transactions ........ [[32mSUCCESS 1[0m in 1.06s]
+[0m06:40:33.935063 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_inventory_transactions
+[0m06:40:33.936042 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_invoices
+[0m06:40:33.938048 [info ] [Thread-1  ]: 5 of 20 START sql view model RAW_stage.stag_invoices ........................... [RUN]
+[0m06:40:33.940043 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_inventory_transactions, now model.nse_data_dsf.stag_invoices)
+[0m06:40:33.942569 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_invoices
+[0m06:40:34.004320 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_invoices"
+[0m06:40:34.008637 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_invoices
+[0m06:40:34.044074 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_INVOICES" because it is of type table
+[0m06:40:34.088405 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_INVOICES"
+[0m06:40:34.091399 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_invoices"
+[0m06:40:34.092397 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_invoices: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_invoices"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_INVOICES" cascade
+[0m06:40:34.092397 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:34.592442 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.500 seconds
+[0m06:40:34.596552 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_invoices"
+[0m06:40:34.600566 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_invoices"
+[0m06:40:34.601571 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_invoices: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_invoices"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_invoices
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.invoices
+)
+select * from source
+  );
+[0m06:40:34.894287 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.291 seconds
+[0m06:40:34.897886 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_invoices: Close
+[0m06:40:35.041931 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002051028B820>]}
+[0m06:40:35.042943 [info ] [Thread-1  ]: 5 of 20 OK created sql view model RAW_stage.stag_invoices ...................... [[32mSUCCESS 1[0m in 1.10s]
+[0m06:40:35.046467 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_invoices
+[0m06:40:35.047750 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_order_details
+[0m06:40:35.049752 [info ] [Thread-1  ]: 6 of 20 START sql view model RAW_stage.stag_order_details ...................... [RUN]
+[0m06:40:35.051754 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_invoices, now model.nse_data_dsf.stag_order_details)
+[0m06:40:35.052751 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_order_details
+[0m06:40:35.099701 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_order_details"
+[0m06:40:35.104211 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_order_details
+[0m06:40:35.130561 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDER_DETAILS" because it is of type table
+[0m06:40:35.171514 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDER_DETAILS"
+[0m06:40:35.174028 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_order_details"
+[0m06:40:35.175040 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_order_details: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_order_details"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDER_DETAILS" cascade
+[0m06:40:35.176043 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:35.619754 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.444 seconds
+[0m06:40:35.622750 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_order_details"
+[0m06:40:35.626278 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_order_details"
+[0m06:40:35.627294 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_order_details: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_order_details"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_order_details
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.order_details
+)
+select * from source
+  );
+[0m06:40:35.907975 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.279 seconds
+[0m06:40:35.912003 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_order_details: Close
+[0m06:40:36.028939 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002051029BB50>]}
+[0m06:40:36.029956 [info ] [Thread-1  ]: 6 of 20 OK created sql view model RAW_stage.stag_order_details ................. [[32mSUCCESS 1[0m in 0.98s]
+[0m06:40:36.033137 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_order_details
+[0m06:40:36.034643 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_order_details_status
+[0m06:40:36.035657 [info ] [Thread-1  ]: 7 of 20 START sql view model RAW_stage.stag_order_details_status ............... [RUN]
+[0m06:40:36.038677 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_order_details, now model.nse_data_dsf.stag_order_details_status)
+[0m06:40:36.040670 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_order_details_status
+[0m06:40:36.087207 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_order_details_status"
+[0m06:40:36.091202 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_order_details_status
+[0m06:40:36.125142 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDER_DETAILS_STATUS" because it is of type table
+[0m06:40:36.170456 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDER_DETAILS_STATUS"
+[0m06:40:36.172458 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_order_details_status"
+[0m06:40:36.173453 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_order_details_status: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_order_details_status"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDER_DETAILS_STATUS" cascade
+[0m06:40:36.174454 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:36.650522 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.476 seconds
+[0m06:40:36.654093 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_order_details_status"
+[0m06:40:36.657109 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_order_details_status"
+[0m06:40:36.658113 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_order_details_status: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_order_details_status"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_order_details_status
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.order_details_status
+)
+select * from source
+  );
+[0m06:40:36.858338 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.200 seconds
+[0m06:40:36.863336 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_order_details_status: Close
+[0m06:40:36.961599 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020510B24610>]}
+[0m06:40:36.964160 [info ] [Thread-1  ]: 7 of 20 OK created sql view model RAW_stage.stag_order_details_status .......... [[32mSUCCESS 1[0m in 0.92s]
+[0m06:40:36.967725 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_order_details_status
+[0m06:40:36.969731 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_orders
+[0m06:40:36.970736 [info ] [Thread-1  ]: 8 of 20 START sql view model RAW_stage.stag_orders ............................. [RUN]
+[0m06:40:36.974239 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_order_details_status, now model.nse_data_dsf.stag_orders)
+[0m06:40:36.975262 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_orders
+[0m06:40:37.026650 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_orders"
+[0m06:40:37.028646 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_orders
+[0m06:40:37.057102 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDERS" because it is of type table
+[0m06:40:37.097767 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDERS"
+[0m06:40:37.100755 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_orders"
+[0m06:40:37.101760 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_orders"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDERS" cascade
+[0m06:40:37.102757 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:37.635555 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.533 seconds
+[0m06:40:37.639567 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_orders"
+[0m06:40:37.642568 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_orders"
+[0m06:40:37.642568 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_orders"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_orders
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.orders
+)
+select * from source
+  );
+[0m06:40:38.051811 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.403 seconds
+[0m06:40:38.056401 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders: Close
+[0m06:40:38.156867 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020510B4F5E0>]}
+[0m06:40:38.158867 [info ] [Thread-1  ]: 8 of 20 OK created sql view model RAW_stage.stag_orders ........................ [[32mSUCCESS 1[0m in 1.18s]
+[0m06:40:38.160866 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_orders
+[0m06:40:38.161869 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_orders_status
+[0m06:40:38.164412 [info ] [Thread-1  ]: 9 of 20 START sql view model RAW_stage.stag_orders_status ...................... [RUN]
+[0m06:40:38.167524 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_orders, now model.nse_data_dsf.stag_orders_status)
+[0m06:40:38.168523 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_orders_status
+[0m06:40:38.227887 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_orders_status"
+[0m06:40:38.232084 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_orders_status
+[0m06:40:38.259197 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDERS_STATUS" because it is of type table
+[0m06:40:38.307186 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDERS_STATUS"
+[0m06:40:38.309186 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_orders_status"
+[0m06:40:38.310187 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders_status: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_orders_status"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDERS_STATUS" cascade
+[0m06:40:38.311187 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:38.860909 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.549 seconds
+[0m06:40:38.864485 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_orders_status"
+[0m06:40:38.868012 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_orders_status"
+[0m06:40:38.869038 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders_status: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_orders_status"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_orders_status
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.orders_status
+)
+select * from source
+  );
+[0m06:40:39.118704 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.248 seconds
+[0m06:40:39.122704 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders_status: Close
+[0m06:40:39.238490 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205103DC2B0>]}
+[0m06:40:39.240499 [info ] [Thread-1  ]: 9 of 20 OK created sql view model RAW_stage.stag_orders_status ................. [[32mSUCCESS 1[0m in 1.07s]
+[0m06:40:39.242888 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_orders_status
+[0m06:40:39.244434 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_orders_tax_status
+[0m06:40:39.246468 [info ] [Thread-1  ]: 10 of 20 START sql view model RAW_stage.stag_orders_tax_status ................. [RUN]
+[0m06:40:39.248575 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_orders_status, now model.nse_data_dsf.stag_orders_tax_status)
+[0m06:40:39.250122 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_orders_tax_status
+[0m06:40:39.294473 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_orders_tax_status"
+[0m06:40:39.298643 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_orders_tax_status
+[0m06:40:39.325361 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDERS_TAX_STATUS" because it is of type table
+[0m06:40:39.366152 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDERS_TAX_STATUS"
+[0m06:40:39.370160 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_orders_tax_status"
+[0m06:40:39.371152 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders_tax_status: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_orders_tax_status"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_ORDERS_TAX_STATUS" cascade
+[0m06:40:39.372162 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:39.865999 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.494 seconds
+[0m06:40:39.869706 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_orders_tax_status"
+[0m06:40:39.872848 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_orders_tax_status"
+[0m06:40:39.874147 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders_tax_status: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_orders_tax_status"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_orders_tax_status
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.orders_tax_status
+)
+select * from source
+  );
+[0m06:40:40.064645 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.190 seconds
+[0m06:40:40.069679 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_orders_tax_status: Close
+[0m06:40:40.196844 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020510B02D90>]}
+[0m06:40:40.197962 [info ] [Thread-1  ]: 10 of 20 OK created sql view model RAW_stage.stag_orders_tax_status ............ [[32mSUCCESS 1[0m in 0.95s]
+[0m06:40:40.201945 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_orders_tax_status
+[0m06:40:40.202962 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_privileges
+[0m06:40:40.205527 [info ] [Thread-1  ]: 11 of 20 START sql view model RAW_stage.stag_privileges ........................ [RUN]
+[0m06:40:40.206525 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_orders_tax_status, now model.nse_data_dsf.stag_privileges)
+[0m06:40:40.207518 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_privileges
+[0m06:40:40.261831 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_privileges"
+[0m06:40:40.265917 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_privileges
+[0m06:40:40.291147 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_PRIVILEGES" because it is of type table
+[0m06:40:40.332131 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_PRIVILEGES"
+[0m06:40:40.334136 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_privileges"
+[0m06:40:40.335369 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_privileges: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_privileges"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_PRIVILEGES" cascade
+[0m06:40:40.336381 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:40.914934 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.578 seconds
+[0m06:40:40.918175 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_privileges"
+[0m06:40:40.922157 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_privileges"
+[0m06:40:40.923168 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_privileges: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_privileges"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_privileges
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.privileges
+)
+select * from source
+  );
+[0m06:40:41.168688 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.245 seconds
+[0m06:40:41.172683 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_privileges: Close
+[0m06:40:41.285728 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020576CF3700>]}
+[0m06:40:41.287726 [info ] [Thread-1  ]: 11 of 20 OK created sql view model RAW_stage.stag_privileges ................... [[32mSUCCESS 1[0m in 1.08s]
+[0m06:40:41.290707 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_privileges
+[0m06:40:41.291727 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_products
+[0m06:40:41.292713 [info ] [Thread-1  ]: 12 of 20 START sql view model RAW_stage.stag_products .......................... [RUN]
+[0m06:40:41.295269 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_privileges, now model.nse_data_dsf.stag_products)
+[0m06:40:41.297807 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_products
+[0m06:40:41.348258 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_products"
+[0m06:40:41.353581 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_products
+[0m06:40:41.379188 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_PRODUCTS" because it is of type table
+[0m06:40:41.420529 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_PRODUCTS"
+[0m06:40:41.422509 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_products"
+[0m06:40:41.423510 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_products: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_products"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_PRODUCTS" cascade
+[0m06:40:41.424507 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:41.995063 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.571 seconds
+[0m06:40:41.998590 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_products"
+[0m06:40:42.001591 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_products"
+[0m06:40:42.002594 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_products: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_products"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_products
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.products
+)
+select * from source
+  );
+[0m06:40:42.535517 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.532 seconds
+[0m06:40:42.540536 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_products: Close
+[0m06:40:42.632803 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205104C37C0>]}
+[0m06:40:42.634325 [info ] [Thread-1  ]: 12 of 20 OK created sql view model RAW_stage.stag_products ..................... [[32mSUCCESS 1[0m in 1.34s]
+[0m06:40:42.637356 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_products
+[0m06:40:42.638356 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_purchase_order_details
+[0m06:40:42.639448 [info ] [Thread-1  ]: 13 of 20 START sql view model RAW_stage.stag_purchase_order_details ............ [RUN]
+[0m06:40:42.641341 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_products, now model.nse_data_dsf.stag_purchase_order_details)
+[0m06:40:42.642339 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_purchase_order_details
+[0m06:40:42.689880 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_purchase_order_details"
+[0m06:40:42.692876 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_purchase_order_details
+[0m06:40:42.720038 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_PURCHASE_ORDER_DETAILS" because it is of type table
+[0m06:40:42.759522 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_PURCHASE_ORDER_DETAILS"
+[0m06:40:42.761520 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_purchase_order_details"
+[0m06:40:42.762521 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_order_details: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_purchase_order_details"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_PURCHASE_ORDER_DETAILS" cascade
+[0m06:40:42.763520 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:43.358619 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.596 seconds
+[0m06:40:43.361619 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_purchase_order_details"
+[0m06:40:43.365710 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_purchase_order_details"
+[0m06:40:43.367741 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_order_details: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_purchase_order_details"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_purchase_order_details
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.purchase_order_details
+)
+select * from source
+  );
+[0m06:40:43.722692 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.354 seconds
+[0m06:40:43.727242 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_order_details: Close
+[0m06:40:43.840393 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205100533D0>]}
+[0m06:40:43.842392 [info ] [Thread-1  ]: 13 of 20 OK created sql view model RAW_stage.stag_purchase_order_details ....... [[32mSUCCESS 1[0m in 1.20s]
+[0m06:40:43.845726 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_purchase_order_details
+[0m06:40:43.846715 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_purchase_order_status
+[0m06:40:43.848531 [info ] [Thread-1  ]: 14 of 20 START sql view model RAW_stage.stag_purchase_order_status ............. [RUN]
+[0m06:40:43.850561 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_purchase_order_details, now model.nse_data_dsf.stag_purchase_order_status)
+[0m06:40:43.852413 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_purchase_order_status
+[0m06:40:43.906247 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_purchase_order_status"
+[0m06:40:43.908257 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_purchase_order_status
+[0m06:40:43.935479 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_PURCHASE_ORDER_STATUS" because it is of type table
+[0m06:40:43.976638 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_PURCHASE_ORDER_STATUS"
+[0m06:40:43.978638 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_purchase_order_status"
+[0m06:40:43.978638 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_order_status: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_purchase_order_status"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_PURCHASE_ORDER_STATUS" cascade
+[0m06:40:43.980151 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:44.470649 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.490 seconds
+[0m06:40:44.474166 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_purchase_order_status"
+[0m06:40:44.477180 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_purchase_order_status"
+[0m06:40:44.478180 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_order_status: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_purchase_order_status"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_purchase_order_status
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.purchase_order_status
+)
+select * from source
+  );
+[0m06:40:44.796880 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.317 seconds
+[0m06:40:44.802307 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_order_status: Close
+[0m06:40:44.907497 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002051043CE50>]}
+[0m06:40:44.909514 [info ] [Thread-1  ]: 14 of 20 OK created sql view model RAW_stage.stag_purchase_order_status ........ [[32mSUCCESS 1[0m in 1.06s]
+[0m06:40:44.912480 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_purchase_order_status
+[0m06:40:44.913476 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_purchase_orders
+[0m06:40:44.915617 [info ] [Thread-1  ]: 15 of 20 START sql view model RAW_stage.stag_purchase_orders ................... [RUN]
+[0m06:40:44.918635 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_purchase_order_status, now model.nse_data_dsf.stag_purchase_orders)
+[0m06:40:44.919643 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_purchase_orders
+[0m06:40:44.972654 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_purchase_orders"
+[0m06:40:44.975167 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_purchase_orders
+[0m06:40:45.003551 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_PURCHASE_ORDERS" because it is of type table
+[0m06:40:45.052819 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_PURCHASE_ORDERS"
+[0m06:40:45.055348 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_purchase_orders"
+[0m06:40:45.056345 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_orders: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_purchase_orders"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_PURCHASE_ORDERS" cascade
+[0m06:40:45.057349 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:45.562301 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.505 seconds
+[0m06:40:45.567413 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_purchase_orders"
+[0m06:40:45.570405 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_purchase_orders"
+[0m06:40:45.571410 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_orders: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_purchase_orders"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_purchase_orders
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.purchase_orders
+)
+select * from source
+  );
+[0m06:40:46.014425 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.441 seconds
+[0m06:40:46.019461 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_purchase_orders: Close
+[0m06:40:46.107640 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020510B68E20>]}
+[0m06:40:46.109641 [info ] [Thread-1  ]: 15 of 20 OK created sql view model RAW_stage.stag_purchase_orders .............. [[32mSUCCESS 1[0m in 1.19s]
+[0m06:40:46.111641 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_purchase_orders
+[0m06:40:46.113150 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_sales_reports
+[0m06:40:46.114687 [info ] [Thread-1  ]: 16 of 20 START sql view model RAW_stage.stag_sales_reports ..................... [RUN]
+[0m06:40:46.117711 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_purchase_orders, now model.nse_data_dsf.stag_sales_reports)
+[0m06:40:46.118722 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_sales_reports
+[0m06:40:46.168573 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_sales_reports"
+[0m06:40:46.172576 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_sales_reports
+[0m06:40:46.196773 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_SALES_REPORTS" because it is of type table
+[0m06:40:46.236660 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_SALES_REPORTS"
+[0m06:40:46.238653 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_sales_reports"
+[0m06:40:46.239653 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_sales_reports: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_sales_reports"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_SALES_REPORTS" cascade
+[0m06:40:46.240654 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:46.749816 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.510 seconds
+[0m06:40:46.752813 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_sales_reports"
+[0m06:40:46.757878 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_sales_reports"
+[0m06:40:46.758901 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_sales_reports: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_sales_reports"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_sales_reports
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.sales_reports
+)
+select * from source
+  );
+[0m06:40:46.991568 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.232 seconds
+[0m06:40:46.998623 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_sales_reports: Close
+[0m06:40:47.084747 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020510AB6610>]}
+[0m06:40:47.085766 [info ] [Thread-1  ]: 16 of 20 OK created sql view model RAW_stage.stag_sales_reports ................ [[32mSUCCESS 1[0m in 0.97s]
+[0m06:40:47.089778 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_sales_reports
+[0m06:40:47.091794 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_shippers
+[0m06:40:47.092800 [info ] [Thread-1  ]: 17 of 20 START sql view model RAW_stage.stag_shippers .......................... [RUN]
+[0m06:40:47.095343 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_sales_reports, now model.nse_data_dsf.stag_shippers)
+[0m06:40:47.097888 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_shippers
+[0m06:40:47.165660 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_shippers"
+[0m06:40:47.170663 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_shippers
+[0m06:40:47.203345 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_SHIPPERS" because it is of type table
+[0m06:40:47.252883 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_SHIPPERS"
+[0m06:40:47.256931 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_shippers"
+[0m06:40:47.257948 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_shippers: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_shippers"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_SHIPPERS" cascade
+[0m06:40:47.258955 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:47.744934 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.486 seconds
+[0m06:40:47.748513 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_shippers"
+[0m06:40:47.752496 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_shippers"
+[0m06:40:47.753497 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_shippers: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_shippers"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_shippers
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.shippers
+)
+select * from source
+  );
+[0m06:40:48.496830 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.742 seconds
+[0m06:40:48.502910 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_shippers: Close
+[0m06:40:48.632970 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205102C85B0>]}
+[0m06:40:48.634488 [info ] [Thread-1  ]: 17 of 20 OK created sql view model RAW_stage.stag_shippers ..................... [[32mSUCCESS 1[0m in 1.54s]
+[0m06:40:48.637500 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_shippers
+[0m06:40:48.638499 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_strings
+[0m06:40:48.639507 [info ] [Thread-1  ]: 18 of 20 START sql view model RAW_stage.stag_strings ........................... [RUN]
+[0m06:40:48.641506 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_shippers, now model.nse_data_dsf.stag_strings)
+[0m06:40:48.642501 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_strings
+[0m06:40:48.689418 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_strings"
+[0m06:40:48.692420 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_strings
+[0m06:40:48.720047 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_STRINGS" because it is of type table
+[0m06:40:48.760924 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_STRINGS"
+[0m06:40:48.761923 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_strings"
+[0m06:40:48.763431 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_strings: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_strings"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_STRINGS" cascade
+[0m06:40:48.764953 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:49.245205 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.480 seconds
+[0m06:40:49.248769 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_strings"
+[0m06:40:49.252766 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_strings"
+[0m06:40:49.253766 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_strings: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_strings"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_strings
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.strings
+)
+select * from source
+  );
+[0m06:40:49.513143 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.259 seconds
+[0m06:40:49.518729 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_strings: Close
+[0m06:40:49.638721 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002051067E5B0>]}
+[0m06:40:49.639720 [info ] [Thread-1  ]: 18 of 20 OK created sql view model RAW_stage.stag_strings ...................... [[32mSUCCESS 1[0m in 1.00s]
+[0m06:40:49.642727 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_strings
+[0m06:40:49.643722 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stag_suppliers
+[0m06:40:49.646058 [info ] [Thread-1  ]: 19 of 20 START sql view model RAW_stage.stag_suppliers ......................... [RUN]
+[0m06:40:49.648592 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_strings, now model.nse_data_dsf.stag_suppliers)
+[0m06:40:49.650602 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stag_suppliers
+[0m06:40:49.709094 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stag_suppliers"
+[0m06:40:49.713581 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stag_suppliers
+[0m06:40:49.742424 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STAG_SUPPLIERS" because it is of type table
+[0m06:40:49.787993 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STAG_SUPPLIERS"
+[0m06:40:49.789998 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_suppliers"
+[0m06:40:49.790998 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_suppliers: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_suppliers"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STAG_SUPPLIERS" cascade
+[0m06:40:49.791995 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:50.214897 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.423 seconds
+[0m06:40:50.218966 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stag_suppliers"
+[0m06:40:50.221942 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stag_suppliers"
+[0m06:40:50.222940 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_suppliers: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stag_suppliers"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stag_suppliers
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.suppliers
+)
+select * from source
+  );
+[0m06:40:50.732915 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.508 seconds
+[0m06:40:50.737438 [debug] [Thread-1  ]: On model.nse_data_dsf.stag_suppliers: Close
+[0m06:40:50.832941 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002051038CE80>]}
+[0m06:40:50.835470 [info ] [Thread-1  ]: 19 of 20 OK created sql view model RAW_stage.stag_suppliers .................... [[32mSUCCESS 1[0m in 1.19s]
+[0m06:40:50.838491 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stag_suppliers
+[0m06:40:50.839488 [debug] [Thread-1  ]: Began running node model.nse_data_dsf.stg_employees
+[0m06:40:50.841490 [info ] [Thread-1  ]: 20 of 20 START sql view model RAW_stage.stg_employees .......................... [RUN]
+[0m06:40:50.842490 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.nse_data_dsf.stag_suppliers, now model.nse_data_dsf.stg_employees)
+[0m06:40:50.843490 [debug] [Thread-1  ]: Began compiling node model.nse_data_dsf.stg_employees
+[0m06:40:50.889513 [debug] [Thread-1  ]: Writing injected SQL for node "model.nse_data_dsf.stg_employees"
+[0m06:40:50.893512 [debug] [Thread-1  ]: Began executing node model.nse_data_dsf.stg_employees
+[0m06:40:50.921863 [debug] [Thread-1  ]: Dropping relation "DL_NORTHWIND"."RAW_STAGE"."STG_EMPLOYEES" because it is of type table
+[0m06:40:50.963244 [debug] [Thread-1  ]: Applying DROP to: "DL_NORTHWIND"."RAW_STAGE"."STG_EMPLOYEES"
+[0m06:40:50.966841 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stg_employees"
+[0m06:40:50.968856 [debug] [Thread-1  ]: On model.nse_data_dsf.stg_employees: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stg_employees"} */
+drop table if exists "DL_NORTHWIND"."RAW_STAGE"."STG_EMPLOYEES" cascade
+[0m06:40:50.969853 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m06:40:51.495146 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.525 seconds
+[0m06:40:51.499110 [debug] [Thread-1  ]: Writing runtime sql for node "model.nse_data_dsf.stg_employees"
+[0m06:40:51.503920 [debug] [Thread-1  ]: Using snowflake connection "model.nse_data_dsf.stg_employees"
+[0m06:40:51.505023 [debug] [Thread-1  ]: On model.nse_data_dsf.stg_employees: /* {"app": "dbt", "dbt_version": "1.9.0b2", "profile_name": "nse_data_dsf", "target_name": "dev", "node_id": "model.nse_data_dsf.stg_employees"} */
+create or replace   view DL_NORTHWIND.RAW_stage.stg_employees
+  
+   as (
+    with source as (
+
+    select * from DL_NORTHWIND.stage.employees
+)
+select * from source
+  );
+[0m06:40:52.018992 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.514 seconds
+[0m06:40:52.022992 [debug] [Thread-1  ]: On model.nse_data_dsf.stg_employees: Close
+[0m06:40:52.145397 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '277461d6-4759-4fd5-8bbd-5456df4d6778', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002051038C5E0>]}
+[0m06:40:52.146927 [info ] [Thread-1  ]: 20 of 20 OK created sql view model RAW_stage.stg_employees ..................... [[32mSUCCESS 1[0m in 1.30s]
+[0m06:40:52.150962 [debug] [Thread-1  ]: Finished running node model.nse_data_dsf.stg_employees
+[0m06:40:52.152938 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:40:52.154482 [debug] [MainThread]: Connection 'list_DL_NORTHWIND' was properly closed.
+[0m06:40:52.156501 [debug] [MainThread]: Connection 'list_DL_NORTHWIND_RAW_stage' was properly closed.
+[0m06:40:52.157503 [debug] [MainThread]: Connection 'model.nse_data_dsf.stg_employees' was properly closed.
+[0m06:40:52.158504 [info ] [MainThread]: 
+[0m06:40:52.160017 [info ] [MainThread]: Finished running 20 view models in 0 hours 0 minutes and 24.64 seconds (24.64s).
+[0m06:40:52.169844 [debug] [MainThread]: Command end result
+[0m06:40:52.484500 [info ] [MainThread]: 
+[0m06:40:52.486517 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m06:40:52.488515 [info ] [MainThread]: 
+[0m06:40:52.490515 [info ] [MainThread]: Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+[0m06:40:52.495585 [debug] [MainThread]: Command `dbt run` succeeded at 06:40:52.494514 after 33.83 seconds
+[0m06:40:52.500140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020574EC68E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020510615E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205103FC430>]}
+[0m06:40:52.501148 [debug] [MainThread]: Flushing usage events
+[0m06:40:52.828164 [debug] [MainThread]: An error was encountered while trying to flush usage events
